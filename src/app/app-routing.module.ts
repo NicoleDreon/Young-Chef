@@ -4,12 +4,12 @@ import { CookingVideosComponent } from './cooking-videos/cooking-videos.componen
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RecipeBoxComponent } from './recipe-box/recipe-box.component';
-import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
+import { SearchRecipesComponent } from './search-recipes/search-recipes.component';
 import { TheBasicsComponent } from './the-basics/the-basics.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'search_recipe', component: SearchRecipeComponent },
+  { path: 'search_recipes', component: SearchRecipesComponent },
   { path: 'the_basics', component: TheBasicsComponent },
   { path: 'recipe_box', component: RecipeBoxComponent },
   { path: 'cooking_videos', component: CookingVideosComponent },
