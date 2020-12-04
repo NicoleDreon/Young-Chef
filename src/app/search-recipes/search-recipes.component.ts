@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecipeService } from '../recipe.service';
@@ -10,6 +10,8 @@ import { RecipeService } from '../recipe.service';
 })
 export class SearchRecipesComponent implements OnInit {
   showRecipes: any[] = [];
+  recipeData: any | null = null;
+  @Input() recipeRef: any;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -21,7 +23,8 @@ export class SearchRecipesComponent implements OnInit {
       let searchTerm = response.get('term');
       if (searchTerm) {
         this.recipeService.getRecipe(searchTerm).subscribe((res: any) => {
-          console.log(res);
+          this.recipeData = res;
+          console.log(this.recipeData);
         });
       } else {
         console.log('no search term'); //trending?
