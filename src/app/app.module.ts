@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
 import { TheBasicsComponent } from './the-basics/the-basics.component';
 import { CookingVideosComponent } from './cooking-videos/cooking-videos.component';
-import { RecipeBookComponent } from './recipe-book/recipe-book.component';
+import { RecipeBoxComponent } from './recipe-box/recipe-box.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -21,16 +21,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SearchRecipeComponent,
     TheBasicsComponent,
     CookingVideosComponent,
-    RecipeBookComponent,
+    RecipeBoxComponent,
     RecipeComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
