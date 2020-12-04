@@ -11,6 +11,7 @@ import { CookingVideosComponent } from './cooking-videos/cooking-videos.componen
 import { RecipeBookComponent } from './recipe-book/recipe-book.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     CookingVideosComponent,
     RecipeBookComponent,
     RecipeComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
