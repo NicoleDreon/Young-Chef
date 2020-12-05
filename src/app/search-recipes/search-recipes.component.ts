@@ -11,6 +11,7 @@ import { RecipeService } from '../recipe.service';
 export class SearchRecipesComponent implements OnInit {
   showRecipes: any[] = [];
   recipeData: any | null = null;
+  recipeID: number | null = null;
   @Input() recipeRef: any;
   constructor(
     private router: Router,
@@ -24,7 +25,7 @@ export class SearchRecipesComponent implements OnInit {
       if (searchTerm) {
         this.recipeService.getRecipe(searchTerm).subscribe((res: any) => {
           this.recipeData = res;
-          console.log(this.recipeData);
+          // console.log(this.recipeID);
         });
       } else {
         console.log('no search term'); //trending?
@@ -39,5 +40,14 @@ export class SearchRecipesComponent implements OnInit {
       },
     });
     console.log(form.value);
+  };
+
+  clickRecipe = (id: number): void => {
+    this.router.navigate(['/recipe'], {
+      queryParams: {
+        id: id,
+      },
+    });
+    console.log(id);
   };
 }

@@ -10,7 +10,7 @@
   <button>Search</button>
 </form>
 <!-- set ngFor item of an Array -->
-<div *ngFor="let recipe of recipeData.results">
+<div *ngFor="let recipe of recipeData.results" (click)="clickRecipe(recipe.id)">
   <p>{{ recipe.title }}</p>
   <img src="{{ recipe.image }}" alt="" />
 </div>
