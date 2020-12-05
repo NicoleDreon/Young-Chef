@@ -1,8 +1,6 @@
-
 import { RecipeService } from '../recipe.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-recipe',
@@ -10,7 +8,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./recipe.component.css'],
 })
 export class RecipeComponent implements OnInit {
-
   recipeID: number | null = null;
   constructor(
     private route: ActivatedRoute,
@@ -21,13 +18,15 @@ export class RecipeComponent implements OnInit {
     this.route.queryParamMap.subscribe((response) => {
       let id = response.get('id');
       if (id) {
-        this.recipeService.getRecipe(id).subscribe((res: any) => {
-          this.recipeID = res;
-        });
+        this.recipeService
+          .getRecipeIngredients(parseInt(id))
+          .subscribe((res: any) => {
+            this.recipeID = res;
+            console.log(this.recipeID);
+          });
       } else {
         console.log('no term');
       }
     });
-
   }
 }
