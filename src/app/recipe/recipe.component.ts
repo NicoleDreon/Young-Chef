@@ -1,6 +1,8 @@
+
 import { RecipeService } from '../recipe.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-recipe',
@@ -8,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./recipe.component.css'],
 })
 export class RecipeComponent implements OnInit {
+
   recipeID: number | null = null;
   constructor(
     private route: ActivatedRoute,
@@ -25,5 +28,6 @@ export class RecipeComponent implements OnInit {
         console.log('no term');
       }
     });
+
   }
 }
