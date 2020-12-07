@@ -15,9 +15,9 @@
   <div>
     <h2>Tools Needed</h2>
     <ul>
-      <li *ngFor="let tool of recipeTools?.equipment">
-        {{ tool.name }}
-        <img src="{{ tool.image }}" alt="" />
+      <li *ngFor="let tool of uniqueTools">
+        {{ tool }}
+        <!-- <img src="{{ tool.image }}" alt="" /> -->
       </li>
     </ul>
   </div>

@@ -30,10 +30,22 @@ export class RecipeComponent implements OnInit {
             .getRecipeEquipment(parseInt(id))
             .subscribe((res: any) => {
               this.recipeTools = res;
+              console.log(this.recipeTools);
+              this.getUniqueTools(this.recipeTools.equipment);
             });
       } else {
         console.log('no term');
       }
     });
   } // End of on init //
+
+  getUniqueTools = (toolsArray: any[]) => {
+    toolsArray.forEach((item: any) => {
+      console.log(item);
+      if (!this.uniqueTools.includes(item.name)) {
+        this.uniqueTools.push(item.name);
+      }
+    });
+    console.log(this.uniqueTools);
+  };
 } // End of export //

@@ -11,6 +11,7 @@ export class RecipeService {
   apiKey: string = '1e0e6ac413064d44ad1312d4c942f92a'; // Leslie
   // apiKey: string = 'ed4e188160314292ab3ffe3a174eec84'; // Kyle
   // apiKey: string = '64b2bbdba0214d90aa607e25138b53e8'; // Nicole
+  // uniqueTools: any[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -45,5 +46,6 @@ export class RecipeService {
         },
       }
     );
-  };
+    // this.getRecipeEquipment.
+  }; // End of getRecipeEquipment function
 } // End of export
