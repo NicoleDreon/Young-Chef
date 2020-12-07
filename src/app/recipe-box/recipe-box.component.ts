@@ -14,4 +14,13 @@ export class RecipeBoxComponent implements OnInit {
   ngOnInit(): void {
     this.favorites = this.recipeService.getFavorites();
   }
-}
+
+  getFavorites = () => {
+    this.favorites = this.recipeService.getFavorites();
+  };
+
+  removeFavorites = (recipe: RecipeBox) => {
+    this.recipeService.addToFavorites(recipe);
+    this.getFavorites();
+  };
+} // end of export

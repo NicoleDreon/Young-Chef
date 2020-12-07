@@ -52,7 +52,7 @@ export class RecipeComponent implements OnInit {
     console.log(this.uniqueTools);
   }; // End of getUniqueTools//
 
-  toggleFavorites = (recipe: any) => {
+  toggleFavorites = () => {
     let favoriteRecipe: RecipeBox = {
       id: this.recipeInfo.id,
       image: this.recipeInfo.image,
@@ -66,7 +66,8 @@ export class RecipeComponent implements OnInit {
       originalLink: this.recipeInfo.sourceUrl,
       isFavorite: false,
     };
-    this.favoriteEvent.emit(favoriteRecipe);
-    console.log(this.recipeService.favorites);
+    console.log(favoriteRecipe);
+    // this.favoriteEvent.emit(favoriteRecipe);
+    this.recipeService.addToFavorites(favoriteRecipe);
   };
 } // End of export //

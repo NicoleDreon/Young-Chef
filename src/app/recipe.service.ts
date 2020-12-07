@@ -61,6 +61,7 @@ export class RecipeService {
     } else {
       this.favorites.splice(index, 1);
     }
+    console.log(this.favorites);
   };
 
   getFavorites = () => {
