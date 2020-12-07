@@ -19,7 +19,7 @@ export class RecipeService {
         addRecipeInformation: 'false',
       },
     });
-  };
+  }; // End of getRecipe
 
   getRecipeIngredients = (id: number): any => {
     return this.http.get(
@@ -31,7 +31,16 @@ export class RecipeService {
         },
       }
     );
+  }; // End of getRecipeIngredients
 
-    // return this.http.get(`${this.ingredientURL}${id}/information`);
+  getRecipeEquipment = (id: number) => {
+    return this.http.get(
+      `https://api.spoonacular.com/recipes/${id}/equipmentWidget.json`,
+      {
+        params: {
+          apiKey: this.apiKey,
+        },
+      }
+    );
   };
-}
+} // End of export

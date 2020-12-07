@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class RecipeComponent implements OnInit {
   recipeInfo: any | null = null;
+  recipeTools: any | null = null;
   constructor(
     private route: ActivatedRoute,
     private recipeService: RecipeService
@@ -23,7 +24,12 @@ export class RecipeComponent implements OnInit {
           .subscribe((res: any) => {
             this.recipeInfo = res;
             console.log(res);
-          });
+          }) &&
+          this.recipeService
+            .getRecipeEquipment(parseInt(id))
+            .subscribe((res: any) => {
+              this.recipeTools = res;
+            });
       } else {
         console.log('no term');
       }

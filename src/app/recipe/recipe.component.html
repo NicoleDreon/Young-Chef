@@ -1,6 +1,6 @@
 <div>
-  <img src="{{ recipeInfo.image }}" alt="" />
-  <h2>{{ recipeInfo.title }}</h2>
+  <img src="{{ recipeInfo?.image }}" alt="" />
+  <h2>{{ recipeInfo?.title }}</h2>
   <!-- <p>{{ recipeInfo.summary }}</p> -->
   <p>Difficulty Rating</p>
   <div>
@@ -10,8 +10,13 @@
     <p>Number of Ingredients</p>
   </div>
   <!-- End of ingredients list div -->
-  <p>Ready in {{ recipeInfo.readyInMinutes }} minutes</p>
-  <p>Number of Servings: {{ recipeInfo.servings }}</p>
+  <p>Ready in {{ recipeInfo?.readyInMinutes }} minutes</p>
+  <p>Number of Servings: {{ recipeInfo?.servings }}</p>
+  <div>
+    <ul>
+      <li *ngFor="let tool of recipeTools?.equipment">{{ tool.image }}</li>
+    </ul>
+  </div>
   <div>
     <ol>
       <li *ngFor="let step of recipeInfo?.analyzedInstructions[0].steps">
@@ -19,4 +24,6 @@
       </li>
     </ol>
   </div>
+  <!-- End of step by step instructions div-->
+  <p><a href="{{ recipeInfo?.sourceUrl }}">View Original Recipe</a></p>
 </div>
