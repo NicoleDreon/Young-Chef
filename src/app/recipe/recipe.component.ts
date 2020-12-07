@@ -1,6 +1,8 @@
 import { RecipeService } from '../recipe.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { RecipeBox } from '../interfaces/recipe-box';
+import { logging } from 'protractor';
 
 @Component({
   selector: 'app-recipe',
@@ -11,6 +13,7 @@ export class RecipeComponent implements OnInit {
   recipeInfo: any | null = null;
   recipeTools: any | null = null;
   uniqueTools: any[] = [];
+  @Output() favoriteEvent = new EventEmitter<RecipeBox>();
   constructor(
     private route: ActivatedRoute,
     private recipeService: RecipeService
@@ -47,5 +50,23 @@ export class RecipeComponent implements OnInit {
       }
     });
     console.log(this.uniqueTools);
+  }; // End of getUniqueTools//
+
+  toggleFavorites = (recipe: any) => {
+    let favoriteRecipe: RecipeBox = {
+      id: this.recipeInfo.id,
+      image: this.recipeInfo.image,
+      title: this.recipeInfo.title,
+      // difficultyRating: ,
+      // numIngredients: ,
+      time: this.recipeInfo.readyInMinutes,
+      servings: this.recipeInfo.servings,
+      tools: this.uniqueTools,
+      instructions: this.recipeInfo.analyzedInstructions,
+      originalLink: this.recipeInfo.sourceUrl,
+      isFavorite: false,
+    };
+    this.favoriteEvent.emit(favoriteRecipe);
+    console.log(this.recipeService.favorites);
   };
 } // End of export //
