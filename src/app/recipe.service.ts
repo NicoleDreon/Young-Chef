@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { RecipeBox } from './interfaces/recipe-box';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +13,8 @@ export class RecipeService {
   // apiKey: string = 'ed4e188160314292ab3ffe3a174eec84'; // Kyle
   // apiKey: string = '64b2bbdba0214d90aa607e25138b53e8'; // Nicole
   // uniqueTools: any[] = [];
+
+  favorites: RecipeBox[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -48,4 +51,15 @@ export class RecipeService {
     );
     // this.getRecipeEquipment.
   }; // End of getRecipeEquipment function
+
+  addToFavorites = (favorite: RecipeBox) => {
+    const index = this.favorites.findIndex((item) => {
+      return item.id === favorite.id;
+    });
+    if (index === -1) {
+      this.favorites.push(favorite);
+    } else {
+      this.favorites.splice(index, 1);
+    }
+  };
 } // End of export
