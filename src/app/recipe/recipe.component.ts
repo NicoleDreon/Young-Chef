@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RecipeComponent implements OnInit {
   recipeInfo: any | null = null;
   recipeTools: any | null = null;
+  uniqueTools: any[] = [];
   constructor(
     private route: ActivatedRoute,
     private recipeService: RecipeService
@@ -34,5 +35,5 @@ export class RecipeComponent implements OnInit {
         console.log('no term');
       }
     });
-  }
-}
+  } // End of on init //
+} // End of export //

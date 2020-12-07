@@ -13,11 +13,16 @@
   <p>Ready in {{ recipeInfo?.readyInMinutes }} minutes</p>
   <p>Number of Servings: {{ recipeInfo?.servings }}</p>
   <div>
+    <h2>Tools Needed</h2>
     <ul>
-      <li *ngFor="let tool of recipeTools?.equipment">{{ tool.image }}</li>
+      <li *ngFor="let tool of recipeTools?.equipment">
+        {{ tool.name }}
+        <img src="{{ tool.image }}" alt="" />
+      </li>
     </ul>
   </div>
   <div>
+    <h2>Step by Step Instructions</h2>
     <ol>
       <li *ngFor="let step of recipeInfo?.analyzedInstructions[0].steps">
         {{ step.step }}
