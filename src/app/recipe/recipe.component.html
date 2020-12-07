@@ -1,5 +1,22 @@
 <div>
-  <div><!-- Image interpolation goes here --></div>
-  <div><!-- Recipe Title interpolation goes here --></div>
-  <div><!-- Recipe Summary interpolation goes here --></div>
+  <img src="{{ recipeInfo.image }}" alt="" />
+  <h2>{{ recipeInfo.title }}</h2>
+  <!-- <p>{{ recipeInfo.summary }}</p> -->
+  <p>Difficulty Rating</p>
+  <div>
+    <ul *ngFor="let info of recipeInfo?.extendedIngredients">
+      <li>{{ info.original }}</li>
+    </ul>
+    <p>Number of Ingredients</p>
+  </div>
+  <!-- End of ingredients list div -->
+  <p>Ready in {{ recipeInfo.readyInMinutes }} minutes</p>
+  <p>Number of Servings: {{ recipeInfo.servings }}</p>
+  <div>
+    <ol>
+      <li *ngFor="let step of recipeInfo?.analyzedInstructions[0].steps">
+        {{ step.step }}
+      </li>
+    </ol>
+  </div>
 </div>
