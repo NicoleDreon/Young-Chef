@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./recipe.component.css'],
 })
 export class RecipeComponent implements OnInit {
-  recipeID: number | null = null;
+  recipeInfo: any | null = null;
   constructor(
     private route: ActivatedRoute,
     private recipeService: RecipeService
@@ -21,8 +21,8 @@ export class RecipeComponent implements OnInit {
         this.recipeService
           .getRecipeIngredients(parseInt(id))
           .subscribe((res: any) => {
-            this.recipeID = res;
-            console.log(this.recipeID);
+            this.recipeInfo = res;
+            console.log(res);
           });
       } else {
         console.log('no term');
