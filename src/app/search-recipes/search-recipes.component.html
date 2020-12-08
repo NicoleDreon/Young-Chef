@@ -11,10 +11,7 @@
 </form>
 <!-- set ngFor item of an Array -->
 
-<div
+<app-search-result
   *ngFor="let recipe of recipeData?.results"
-  (click)="clickRecipe(recipe.id)"
->
-  <p>{{ recipe.title }}</p>
-  <img src="{{ recipe.image }}" alt="" />
-</div>
+  [recipe]="recipe"
+></app-search-result>
