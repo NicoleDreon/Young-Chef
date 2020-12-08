@@ -13,6 +13,8 @@ import { RecipeBoxComponent } from './recipe-box/recipe-box.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { FavoriteRecipeComponent } from './favorite-recipe/favorite-recipe.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     RecipeComponent,
     FooterComponent,
     PageNotFoundComponent,
+    SearchResultComponent,
+    FavoriteRecipeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

@@ -41,13 +41,4 @@ export class SearchRecipesComponent implements OnInit {
     });
     console.log(form.value);
   };
-
-  clickRecipe = (id: number): void => {
-    this.router.navigate(['/recipe'], {
-      queryParams: {
-        id: id,
-      },
-    });
-    console.log(id);
-  };
 }
