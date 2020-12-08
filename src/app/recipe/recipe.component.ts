@@ -68,6 +68,6 @@ export class RecipeComponent implements OnInit {
     };
     console.log(favoriteRecipe);
     // this.favoriteEvent.emit(favoriteRecipe);
-    this.recipeService.addToFavorites(favoriteRecipe);
+    this.recipeService.editFavorites(favoriteRecipe);
   };
 } // End of export //

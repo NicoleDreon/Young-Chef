@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RecipeBox } from '../interfaces/recipe-box';
 import { RecipeService } from '../recipe.service';
 
@@ -9,14 +9,19 @@ import { RecipeService } from '../recipe.service';
 })
 export class FavoriteRecipeComponent implements OnInit {
   favorites: RecipeBox[] = [];
+  @Input() recipeInfo: any;
   constructor(private recipeService: RecipeService) {}
 
   ngOnInit(): void {
-    this.favorites = this.recipeService.getFavorites();
-    console.log(this.favorites);
+    this.getFavorites();
   }
 
   getFavorites = () => {
     this.favorites = this.recipeService.getFavorites();
+  };
+
+  removeFavorite = (recipe: RecipeBox): void => {
+    this.recipeService.editFavorites(recipe);
+    this.getFavorites();
   };
 } //

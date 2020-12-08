@@ -1,2 +1,5 @@
 <app-header></app-header>
-<app-favorite-recipe *ngFor="let favorite of favorites"></app-favorite-recipe>
+<app-favorite-recipe
+  *ngFor="let favorite of favorites"
+  [recipeInfo]="favorite"
+></app-favorite-recipe>

@@ -12,7 +12,7 @@ export class RecipeBoxComponent implements OnInit {
   constructor(private recipeService: RecipeService) {}
 
   ngOnInit(): void {
-    this.favorites = this.recipeService.getFavorites();
+    this.getFavorites();
   }
 
   getFavorites = () => {
@@ -20,7 +20,7 @@ export class RecipeBoxComponent implements OnInit {
   };
 
   removeFavorites = (recipe: RecipeBox) => {
-    this.recipeService.addToFavorites(recipe);
+    this.recipeService.editFavorites(recipe);
     this.getFavorites();
   };
 } // end of export
