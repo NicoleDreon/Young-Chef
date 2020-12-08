@@ -24,4 +24,4 @@ export class FavoriteRecipeComponent implements OnInit {
     this.recipeService.editFavorites(recipe);
     this.getFavorites();
   };
-} //
+}
