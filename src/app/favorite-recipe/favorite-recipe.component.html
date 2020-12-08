@@ -1,3 +1,5 @@
-<img src="{{ recipeInfo?.image }}" alt="" />
-<i class="far fa-heart"></i>
-<p>{{ recipeInfo.title }}</p>
+<div *ngFor="let favorite of favorites">
+  <img src="{{ favorite.image }}" alt="" />
+  <p>{{ favorite.title }}</p>
+  <button (click)="removeFavorite(favorite)">x</button>
+</div>
