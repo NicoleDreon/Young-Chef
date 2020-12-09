@@ -24,15 +24,14 @@ export class SearchRecipesComponent implements OnInit {
       let searchTerm = response.get('term');
       if (searchTerm) {
         this.recipeService.getRecipe(searchTerm).subscribe((res: any) => {
-          this.recipeData = res;
-          // console.log(this.recipeService.getRandomRecipe());
+          this.recipeData = res.results;
+          console.log(res);
         });
       } else {
         this.recipeService.getRandomRecipe().subscribe((res: any) => {
-          this.recipeData = res;
-          console.log(this.recipeService.getRandomRecipe());
+          this.recipeData = res.recipes;
+          console.log(res);
         });
-        console.log(this.recipeService.getRandomRecipe());
         console.log('no search term'); //trending?
       }
     });
