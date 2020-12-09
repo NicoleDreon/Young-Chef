@@ -1,10 +1,13 @@
 <app-header></app-header>
-<youtube-player
-  videoId="Gy72Bfm1SmQ"
-  suggestedQuality="highres"
-  [height]="250"
-  [width]="500"
-  [startSeconds]="4"
-  [endSeconds]="8"
->
-</youtube-player>
+<h2>Cooking Basics</h2>
+<div *ngFor="let video of basicsArray">
+  <youtube-player
+    videoId="{{ video }}"
+    suggestedQuality="highres"
+    [height]="250"
+    [width]="500"
+    [startSeconds]="0"
+    [endSeconds]="100000"
+  >
+  </youtube-player>
+</div>
