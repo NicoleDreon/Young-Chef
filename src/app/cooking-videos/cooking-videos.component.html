@@ -1,8 +1,44 @@
 <app-header></app-header>
+<!-- Cooking Basics -->
 <h2>Cooking Basics</h2>
-<div *ngFor="let video of basicsArray">
+<div class="videos-array-container">
+  <div class="video-container" *ngFor="let video of basicsArray">
+    <youtube-player
+      videoId="{{ video.id }}"
+      suggestedQuality="highres"
+      [height]="250"
+      [width]="500"
+      [startSeconds]="0"
+      [endSeconds]="100000"
+    >
+    </youtube-player>
+    <h3>{{ video.title }}</h3>
+  </div>
+  <!--End of video-container -->
+</div>
+<!--End of -->
+<!-- Kid Cooking Lessons -->
+<h2>Cooking Lessons</h2>
+<div class="videos-array-container">
+  <div class="video-container" *ngFor="let video of lessonsArray">
+    <youtube-player
+      videoId="{{ video.id }}"
+      suggestedQuality="highres"
+      [height]="250"
+      [width]="500"
+      [startSeconds]="0"
+      [endSeconds]="100000"
+    >
+    </youtube-player>
+    <h3>{{ video.title }}</h3>
+  </div>
+</div>
+<!-- Breakfast
+<div class="videos-array-container">
+<h2>Breakfast</h2>
+<div class="video-container" *ngFor="let video of breakfastArray">
   <youtube-player
-    videoId="{{ video }}"
+    videoId="{{ video.id }}"
     suggestedQuality="highres"
     [height]="250"
     [width]="500"
@@ -10,4 +46,86 @@
     [endSeconds]="100000"
   >
   </youtube-player>
+  <h3>{{ video.title }}</h3>
 </div>
+</div>
+Lunch
+<div class="videos-array-container">
+<h2>Lunch</h2>
+<div class="video-container" *ngFor="let video of lunchArray">
+  <youtube-player
+    videoId="{{ video.id }}"
+    suggestedQuality="highres"
+    [height]="250"
+    [width]="500"
+    [startSeconds]="0"
+    [endSeconds]="100000"
+  >
+  </youtube-player>
+  <h3>{{ video.title }}</h3>
+</div>
+</div>
+Dinner
+<div class="videos-array-container">
+<h2>Dinner</h2>
+<div class="video-container" *ngFor="let video of dinnerArray">
+  <youtube-player
+    videoId="{{ video.id }}"
+    suggestedQuality="highres"
+    [height]="250"
+    [width]="500"
+    [startSeconds]="0"
+    [endSeconds]="100000"
+  >
+  </youtube-player>
+  <h3>{{ video.title }}</h3>
+</div>
+</div>
+Snacks
+<div class="videos-array-container">
+<h2>Snacks</h2>
+<div class="video-container" *ngFor="let video of snacksArray">
+  <youtube-player
+    videoId="{{ video.id }}"
+    suggestedQuality="highres"
+    [height]="250"
+    [width]="500"
+    [startSeconds]="0"
+    [endSeconds]="100000"
+  >
+  </youtube-player>
+  <h3>{{ video.title }}</h3>
+</div>
+</div>
+Teens
+<div class="videos-array-container">
+<h2>Teens Cooking</h2>
+<div class="video-container" *ngFor="let video of teensArray">
+  <youtube-player
+    videoId="{{ video.id }}"
+    suggestedQuality="highres"
+    [height]="250"
+    [width]="500"
+    [startSeconds]="0"
+    [endSeconds]="100000"
+  >
+  </youtube-player>
+  <h3>{{ video.title }}</h3>
+  </div
+</div>
+College
+<div class="videos-array-container">
+<h2>College Students Cooking</h2>
+<div class="video-container" *ngFor="let video of collegeArray">
+  <youtube-player
+    videoId="{{ video.id }}"
+    suggestedQuality="highres"
+    [height]="250"
+    [width]="500"
+    [startSeconds]="0"
+    [endSeconds]="100000"
+  >
+  </youtube-player>
+  <h3>{{ video.title }}</h3>
+</div>
+</div> -->

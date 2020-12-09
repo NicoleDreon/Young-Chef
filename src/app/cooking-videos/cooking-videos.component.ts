@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Videos } from '../interfaces/videos';
 import { RecipeService } from '../recipe.service';
 import { VideoService } from '../video.service';
 
@@ -8,7 +9,14 @@ import { VideoService } from '../video.service';
   styleUrls: ['./cooking-videos.component.css'],
 })
 export class CookingVideosComponent implements OnInit {
-  basicsArray: string[] = [];
+  basicsArray: Videos[] = [];
+  lessonsArray: Videos[] = [];
+  breakfastArray: Videos[] = [];
+  lunchArray: Videos[] = [];
+  dinnerArray: Videos[] = [];
+  snacksArray: Videos[] = [];
+  teensArray: Videos[] = [];
+  collegeArray: Videos[] = [];
   // videoId: string | null = null;
   constructor(private videoService: VideoService) {}
 
@@ -17,5 +25,29 @@ export class CookingVideosComponent implements OnInit {
       this.videoService.kidCookingBasics
     );
     console.log(this.basicsArray);
+
+    this.lessonsArray = this.videoService.getArray(
+      this.videoService.cookingLessons
+    );
+
+    this.breakfastArray = this.videoService.getArray(
+      this.videoService.breakfastArray
+    );
+
+    this.lunchArray = this.videoService.getArray(this.videoService.lunchArray);
+
+    this.dinnerArray = this.videoService.getArray(
+      this.videoService.dinnerArray
+    );
+
+    this.snacksArray = this.videoService.getArray(
+      this.videoService.snacksArray
+    );
+
+    this.teensArray = this.videoService.getArray(this.videoService.teensArray);
+
+    this.collegeArray = this.videoService.getArray(
+      this.videoService.collegeArray
+    );
   }
 }

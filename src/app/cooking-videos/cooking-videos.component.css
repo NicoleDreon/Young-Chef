@@ -1,0 +1,8 @@
+.video-container {
+  margin: 5px;
+}
+
+.videos-array-container {
+  display: flex;
+  flex-direction: row;
+}
