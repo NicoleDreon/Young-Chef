@@ -10,6 +10,10 @@
   />
   <button>Search</button>
 </form>
+
+<p>Ready in {{ val }} minutes</p>
+<p-slider [(ngModel)]="val" [min]="0" [max]="60"></p-slider>
+
 <!-- set ngFor item of an Array -->
 
 <!-- Search Results show below -->
