@@ -25,13 +25,18 @@ export class SearchRecipesComponent implements OnInit {
       if (searchTerm) {
         this.recipeService.getRecipe(searchTerm).subscribe((res: any) => {
           this.recipeData = res;
-          // console.log(this.recipeID);
+          // console.log(this.recipeService.getRandomRecipe());
         });
       } else {
+        this.recipeService.getRandomRecipe().subscribe((res: any) => {
+          this.recipeData = res;
+          console.log(this.recipeService.getRandomRecipe());
+        });
+        console.log(this.recipeService.getRandomRecipe());
         console.log('no search term'); //trending?
       }
     });
-  }
+  } // End of ngOnInit
 
   searchRecipes = (form: NgForm): void => {
     this.router.navigate(['/search_recipes'], {
@@ -42,3 +47,17 @@ export class SearchRecipesComponent implements OnInit {
     console.log(form.value);
   };
 }
+
+// this.route.queryParamMap.subscribe((response) => {
+//   let searchTerm = response.get('term');
+//   if (searchTerm) {
+//     this.recipeService.getRecipe(searchTerm).subscribe((res: any) => {
+//       this.recipeData = res;
+//       // console.log(this.recipeID);
+//     });
+//   } else {
+//     this.recipeService.getRandomRecipe();
+//     console.log(this.recipeService.getRandomRecipe());
+//     console.log('no search term'); //trending?
+//   }
+// });
