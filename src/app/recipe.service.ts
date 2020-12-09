@@ -15,7 +15,6 @@ export class RecipeService {
   // uniqueTools: any[] = [];
 
   favorites: RecipeBox[] = [];
-
   constructor(private http: HttpClient) {}
 
   getRecipe = (searchTerm: string): any => {
