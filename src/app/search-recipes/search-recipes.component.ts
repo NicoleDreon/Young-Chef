@@ -24,14 +24,18 @@ export class SearchRecipesComponent implements OnInit {
       let searchTerm = response.get('term');
       if (searchTerm) {
         this.recipeService.getRecipe(searchTerm).subscribe((res: any) => {
-          this.recipeData = res;
-          // console.log(this.recipeID);
+          this.recipeData = res.results;
+          console.log(res);
         });
       } else {
+        this.recipeService.getRandomRecipe().subscribe((res: any) => {
+          this.recipeData = res.recipes;
+          console.log(res);
+        });
         console.log('no search term'); //trending?
       }
     });
-  }
+  } // End of ngOnInit
 
   searchRecipes = (form: NgForm): void => {
     this.router.navigate(['/search_recipes'], {
@@ -41,4 +45,6 @@ export class SearchRecipesComponent implements OnInit {
     });
     console.log(form.value);
   };
-}
+
+  filterCookTime = (cookTime: number) => {};
+} // End of export

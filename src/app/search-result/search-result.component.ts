@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { RecipeBox } from '../interfaces/recipe-box';
 import { RecipeService } from '../recipe.service';
@@ -12,6 +12,8 @@ export class SearchResultComponent implements OnInit {
   @Input() recipe: any;
   // @Input() recipeInfo: any | null;
   // @Input() uniqueTools: any[] = [];
+  val: number | null = null;
+  val2: number | null = null;
   constructor(private router: Router, private recipeService: RecipeService) {}
 
   ngOnInit(): void {}
@@ -25,8 +27,8 @@ export class SearchResultComponent implements OnInit {
     console.log(id);
   };
 
-  //uses service 'editFavorites' to place recipe into favoritesz
+  //uses service 'editFavorites' to place recipe into favorites
   toggleFavorites = () => {
     this.recipeService.editFavorites(this.recipe);
   };
-}
+} // End of export

@@ -16,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { FavoriteRecipeComponent } from './favorite-recipe/favorite-recipe.component';
+import { SliderModule } from 'primeng/slider';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { FavoriteRecipeComponent } from './favorite-recipe/favorite-recipe.compo
     HttpClientModule,
     FormsModule,
     YouTubePlayerModule,
+    SliderModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

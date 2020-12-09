@@ -10,10 +10,16 @@
   />
   <button>Search</button>
 </form>
-<!-- set ngFor item of an Array -->
+<!-- # of Ingredients filter/slider -->
+<p>Number of Ingredients: {{ val2 }}</p>
+<p-slider [(ngModel)]="val2" [min]="0" [max]="20"></p-slider>
 
-<!-- what is this doing => [recipe]="recipe" -->
+<!-- Ready in minutes filter/slider -->
+<p>Time to make: {{ val }} minutes</p>
+<p-slider [(ngModel)]="val" [min]="0" [max]="60"></p-slider>
+
+<!-- Search Results show below -->
 <app-search-result
-  *ngFor="let recipe of recipeData?.results"
+  *ngFor="let recipe of recipeData"
   [recipe]="recipe"
 ></app-search-result>
