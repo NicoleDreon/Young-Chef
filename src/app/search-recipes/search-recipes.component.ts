@@ -45,18 +45,6 @@ export class SearchRecipesComponent implements OnInit {
     });
     console.log(form.value);
   };
-}
 
-// this.route.queryParamMap.subscribe((response) => {
-//   let searchTerm = response.get('term');
-//   if (searchTerm) {
-//     this.recipeService.getRecipe(searchTerm).subscribe((res: any) => {
-//       this.recipeData = res;
-//       // console.log(this.recipeID);
-//     });
-//   } else {
-//     this.recipeService.getRandomRecipe();
-//     console.log(this.recipeService.getRandomRecipe());
-//     console.log('no search term'); //trending?
-//   }
-// });
+  filterCookTime = (cookTime: number) => {};
+} // End of export
