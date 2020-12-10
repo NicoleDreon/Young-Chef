@@ -15,9 +15,10 @@
   [circular]="true"
 >
   <ng-template pTemplate="item" let-item>
-    <img src="{{ item.image }}" alt="" />
+    <img src="{{ item.image }}" (click)="clickRecipe(item.id)" />
   </ng-template>
 </p-galleria>
+<p>Did you know? {{ trivia?.text }}</p>
 <div class="home-container">
   <a routerLink="/the_basics" class="home-options basics">The Basics</a>
   <a routerLink="/search_recipes" class="home-options search-recipes"
