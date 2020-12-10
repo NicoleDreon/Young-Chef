@@ -24,7 +24,7 @@ export class RecipeService {
       params: {
         apiKey: this.apiKey,
         query: searchTerm,
-        addRecipeInformation: 'false',
+        addRecipeInformation: 'true',
       },
     });
   }; // End of getRecipe

@@ -13,8 +13,9 @@ export class SearchRecipesComponent implements OnInit {
   recipeData: any | null = null;
   recipeID: number | null = null;
   @Input() recipeRef: any;
-  val: number | null = null;
+  minutesVal: number | null = 90;
   val2: number | null = null;
+  minutesObject: any | null = null;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -48,5 +49,37 @@ export class SearchRecipesComponent implements OnInit {
     console.log(form.value);
   };
 
-  filterCookTime = (cookTime: number) => {};
+  //create interface later for filterObject
+  filterRecipes = () => {
+    if (!this.minutesObject) {
+      return this.recipeData;
+    } else {
+      return this.recipeData.filter((recipe: any) => {
+        return recipe.readyInMinutes <= this.minutesObject.value;
+      });
+    }
+  };
+
+  setNumberOfMinutes = (value: number) => {
+    console.log(value);
+    this.minutesObject = {
+      type: 'minutes',
+      value: value,
+    };
+    this.filterRecipes();
+  };
+
+  // let newArray = this.recipeData.filter((item)=>{
+  //   if(item.readyInMinutes <= this.minutesVal){
+  //     return item;
+  //   }
+  //   console.log(newArray)
+  // })
+  // filterCookTime = (array: ShowRecipes[], cookTime: number) => {
+  //    return cookTime = this.recipeData.readyInMinutes
+  //   if(cookTime > this.val!){
+  //     let filtered =
+  //     return this.getRecipe()
+  //   }
+  // };
 } // End of export
