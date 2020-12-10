@@ -28,40 +28,40 @@ export class VideoService {
       title: 'How To Cook Pasta Properly ( Step by Step Pasta Cooking )',
       id: 'OMRUIrbZDpM',
     },
-    {
-      title: 'How to Measure - for Kids!',
-      id: 'D5YsCyWHufE',
-    },
-    {
-      title: 'Kitchen Math',
-      id: 'wszRf0A3btk',
-    },
-    {
-      title: 'How to Keep Kids SAFE in the Kitchen',
-      id: 'QVtwhOHLP44',
-    },
-    {
-      title: 'Cooking Verbs',
-      id: '4YB-y4hakN8',
-    },
-    {
-      title: 'Cooking Up Fractions Series',
-      id: 'DCqYoL1a3a4',
-    },
-    {
-      title:
-        'Kitchen Tools: Useful List of Essential Kitchen Utensils in English with Pictures',
-      id: 'FccOg9rVr-U',
-    },
-    {
-      title:
-        'Kitchen Tools and Equipment | Appetizer | Cookery | TLE | Ms. Arl',
-      id: 'eX2d_BnEve8',
-    },
-    {
-      title: '"Team Cooking" - A story about teamwork in a kitchen',
-      id: 'eJXNmtsbZRo',
-    },
+    // {
+    //   title: 'How to Measure - for Kids!',
+    //   id: 'D5YsCyWHufE',
+    // },
+    // {
+    //   title: 'Kitchen Math',
+    //   id: 'wszRf0A3btk',
+    // },
+    // {
+    //   title: 'How to Keep Kids SAFE in the Kitchen',
+    //   id: 'QVtwhOHLP44',
+    // },
+    // {
+    //   title: 'Cooking Verbs',
+    //   id: '4YB-y4hakN8',
+    // },
+    // {
+    //   title: 'Cooking Up Fractions Series',
+    //   id: 'DCqYoL1a3a4',
+    // },
+    // {
+    //   title:
+    //     'Kitchen Tools: Useful List of Essential Kitchen Utensils in English with Pictures',
+    //   id: 'FccOg9rVr-U',
+    // },
+    // {
+    //   title:
+    //     'Kitchen Tools and Equipment | Appetizer | Cookery | TLE | Ms. Arl',
+    //   id: 'eX2d_BnEve8',
+    // },
+    // {
+    //   title: '"Team Cooking" - A story about teamwork in a kitchen',
+    //   id: 'eJXNmtsbZRo',
+    // },
   ];
   cookingLessons = [
     {
@@ -74,7 +74,7 @@ export class VideoService {
     },
     {
       title: 'How to Bake Cupcakes -- Cooking for Kids',
-      id: 'xze8atBaVEY}',
+      id: 'xze8atBaVEY',
     },
     {
       title: 'Easy Homemade Ice Cream | Full-Time Kid | PBS Parents',
@@ -84,27 +84,27 @@ export class VideoService {
       title: 'Teaching Kids to Work ~ 3-year-old Making Scrambled Eggs',
       id: '7rLP0ZG0Fps',
     },
-    {
-      title: 'EAT | 5 Homework Snacks Kids Can Make!!',
-      id: 'zrXWIWlF5_M',
-    },
-    {
-      title: 'How To Cook The Perfect Egg - Kids Cooking Lessons',
-      id: '-1FNuNfOB0E',
-    },
-    {
-      title:
-        'Healthy Travel Snacks for Families from Kids Cook Real Food (Cooking Classes for Kids)',
-      id: 'Wxl9RSwTjoE',
-    },
-    {
-      title: 'Cooking Camps for Kids',
-      id: 'WAji6qO0wkU',
-    },
-    {
-      title: '15 Cooking Tricks Chefs Reveal Only at Culinary Schools',
-      id: 'NCZaq9pSBxQ',
-    },
+    // {
+    //   title: 'EAT | 5 Homework Snacks Kids Can Make!!',
+    //   id: 'zrXWIWlF5_M',
+    // },
+    // {
+    //   title: 'How To Cook The Perfect Egg - Kids Cooking Lessons',
+    //   id: '-1FNuNfOB0E',
+    // },
+    // {
+    //   title:
+    //     'Healthy Travel Snacks for Families from Kids Cook Real Food (Cooking Classes for Kids)',
+    //   id: 'Wxl9RSwTjoE',
+    // },
+    // {
+    //   title: 'Cooking Camps for Kids',
+    //   id: 'WAji6qO0wkU',
+    // },
+    // {
+    //   title: '15 Cooking Tricks Chefs Reveal Only at Culinary Schools',
+    //   id: 'NCZaq9pSBxQ',
+    // },
   ];
   breakfastArray = [
     {

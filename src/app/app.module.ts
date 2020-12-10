@@ -18,6 +18,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { FavoriteRecipeComponent } from './favorite-recipe/favorite-recipe.component';
 import { SliderModule } from 'primeng/slider';
 import { ButtonModule } from 'primeng/button';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ButtonModule } from 'primeng/button';
     YouTubePlayerModule,
     SliderModule,
     ButtonModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

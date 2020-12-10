@@ -13,6 +13,8 @@ export class SearchRecipesComponent implements OnInit {
   recipeData: any | null = null;
   recipeID: number | null = null;
   @Input() recipeRef: any;
+  val: number | null = null;
+  val2: number | null = null;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
