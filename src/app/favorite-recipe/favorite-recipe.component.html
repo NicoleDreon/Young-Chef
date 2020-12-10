@@ -1,5 +1,5 @@
 <div *ngFor="let favorite of favorites">
-  <img src="{{ favorite.image }}" alt="" />
+  <img src="{{ favorite.image }}" alt="" (click)="clickRecipe(favorite.id)" />
   <p>{{ favorite.title }}</p>
   <button (click)="removeFavorite(favorite)">x</button>
 </div>
