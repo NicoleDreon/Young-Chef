@@ -11,15 +11,21 @@
   <button>Search</button>
 </form>
 <!-- # of Ingredients filter/slider -->
-<p>Number of Ingredients: {{ val2 }}</p>
-<p-slider [(ngModel)]="val2" [min]="0" [max]="20"></p-slider>
+<!-- <p>Number of Ingredients: {{ val2 }}</p>
+<p-slider [min]="0" [max]="20"></p-slider> -->
+<!-- (onChange)="setNumberOfIngredients($event.value)" -->
 
 <!-- Ready in minutes filter/slider -->
-<p>Time to make: {{ val }} minutes</p>
-<p-slider [(ngModel)]="val" [min]="0" [max]="60"></p-slider>
+<p>Time to make: {{ minutesVal }} minutes</p>
+<p-slider
+  [(ngModel)]="minutesVal"
+  (onChange)="setNumberOfMinutes($event.value)"
+  [min]="20"
+  [max]="160"
+></p-slider>
 
 <!-- Search Results show below -->
 <app-search-result
-  *ngFor="let recipe of recipeData"
+  *ngFor="let recipe of filterRecipes()"
   [recipe]="recipe"
 ></app-search-result>
