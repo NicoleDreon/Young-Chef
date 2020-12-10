@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RecipeBox } from '../interfaces/recipe-box';
 import { RecipeService } from '../recipe.service';
 
@@ -10,7 +11,7 @@ import { RecipeService } from '../recipe.service';
 export class FavoriteRecipeComponent implements OnInit {
   favorites: RecipeBox[] = [];
   @Input() recipeInfo: any;
-  constructor(private recipeService: RecipeService) {}
+  constructor(private recipeService: RecipeService, private router: Router) {}
 
   ngOnInit(): void {
     this.getFavorites();
@@ -23,5 +24,14 @@ export class FavoriteRecipeComponent implements OnInit {
   removeFavorite = (recipe: RecipeBox): void => {
     this.recipeService.editFavorites(recipe);
     this.getFavorites();
+  };
+
+  clickRecipe = (id: number): void => {
+    this.router.navigate(['/recipe'], {
+      queryParams: {
+        id: id,
+      },
+    });
+    console.log(id);
   };
 }

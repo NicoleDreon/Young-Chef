@@ -1,4 +1,23 @@
 <app-header></app-header>
+<h2>Welcome Young Chef!</h2>
+<p>What's cookin' today?</p>
+<p-galleria
+  [value]="randomRecipe"
+  [responsiveOptions]="responsiveOptions"
+  [containerStyle]="{ 'max-width': '800px' }"
+  [numVisible]="1"
+  [showThumbnails]="false"
+  [showIndicators]="true"
+  [changeItemOnIndicatorHover]="true"
+  [showIndicatorsOnItem]="true"
+  [autoPlay]="true"
+  [transitionInterval]="2000"
+  [circular]="true"
+>
+  <ng-template pTemplate="item" let-item>
+    <img src="{{ item.image }}" alt="" />
+  </ng-template>
+</p-galleria>
 <div class="home-container">
   <a routerLink="/the_basics" class="home-options basics">The Basics</a>
   <a routerLink="/search_recipes" class="home-options search-recipes"
