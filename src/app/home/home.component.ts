@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RecipeService } from '../recipe.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { RecipeService } from '../recipe.service';
 })
 export class HomeComponent implements OnInit {
   randomRecipe: any | null = null;
+  trivia: any | null;
   counter: number = 0;
   responsiveOptions: any[] = [
     {
@@ -27,25 +29,28 @@ export class HomeComponent implements OnInit {
       numVisible: 1,
     },
   ];
-  constructor(private recipeService: RecipeService) {}
+  constructor(private recipeService: RecipeService, private router: Router) {}
 
   ngOnInit(): void {
     this.recipeService.getRandomRecipe().subscribe((res: any) => {
       this.randomRecipe = res.recipes;
       console.log(res);
-      // this.loopRecipe();
+    });
+    this.recipeService.getTrivia().subscribe((trivia: any) => {
+      this.trivia = trivia;
+      console.log(trivia);
     });
   }
+  clickRecipe = (id: number): void => {
+    this.router.navigate(['/recipe'], {
+      queryParams: {
+        id: id,
+      },
+    });
+    console.log(id);
+  };
 
-  // loopRecipe = () => {
-  //   for (let i = 0; i < this.randomRecipe.length; i++) {
-  //     if (this.counter === this.randomRecipe.length) {
-  //       this.counter = 0;
-  //     } else {
-  //       this.counter++;
-  //     }
-  //   }
-  // };
+  //-------- future reference timer funciton -------------
   //   timeout = () => {
   //     setTimeout(() => {
   //       if (this.counter === this.randomRecipe.length) {

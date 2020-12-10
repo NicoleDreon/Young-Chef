@@ -9,10 +9,11 @@ export class RecipeService {
   searchURL: string = 'https://api.spoonacular.com/recipes/complexSearch';
   ingredientURL: string = 'https://api.spoonacular.com/recipes/id/information';
   randomURL: string = 'https://api.spoonacular.com/recipes/random';
+  triviaURL: string = 'https://api.spoonacular.com/food/trivia/random';
 
   // apiKey: string = '7ed03fd3e48b465985205b580d3d8763'; // Phil
-  apiKey: string = '1e0e6ac413064d44ad1312d4c942f92a'; // Leslie
-  // apiKey: string = 'ed4e188160314292ab3ffe3a174eec84'; // Kyle
+  // apiKey: string = '1e0e6ac413064d44ad1312d4c942f92a'; // Leslie
+  apiKey: string = 'ed4e188160314292ab3ffe3a174eec84'; // Kyle
   // apiKey: string = '64b2bbdba0214d90aa607e25138b53e8'; // Nicole
   // uniqueTools: any[] = [];
 
@@ -52,6 +53,14 @@ export class RecipeService {
     );
     // this.getRecipeEquipment.
   }; // End of getRecipeEquipment function
+
+  getTrivia = (): any => {
+    return this.http.get(this.triviaURL, {
+      params: {
+        apiKey: this.apiKey,
+      },
+    });
+  }; // end of trivia
 
   editFavorites = (favorite: RecipeBox) => {
     const index = this.favorites.findIndex((item) => {
