@@ -1,165 +1,259 @@
 <app-header></app-header>
-
-<!-- Cooking Basics -->
-<!-- Start of the carousel -->
-<p-carousel
-  [value]="basicsArray"
-  [numVisible]="3"
-  [numScroll]="1"
-  [responsiveOptions]="responsiveOptions"
->
-  <!-- Video category header -->
-  <ng-template pTemplate="header">
-    <h2>Cooking Basics</h2>
-  </ng-template>
-  <!-- Video carousel -->
-  <ng-template let-product pTemplate="item">
-    <!-- where does the let-product tie in?-->
-    <div class="videos-array-container">
-      <div class="video-container" *ngFor="let video of basicsArray">
-        <youtube-player
-          videoId="{{ video.id }}"
-          suggestedQuality="hd720"
-          [height]="250"
-          [width]="500"
-          [startSeconds]="0"
-          [endSeconds]="100000"
-        >
-        </youtube-player>
-        <h3>{{ video.title }}</h3>
-      </div>
-      <!--End of video-container -->
-    </div>
-    <!--End of videos-array-container -->
-  </ng-template>
-</p-carousel>
-<!--End of Cooking Basics Carousel-->
-
-<!-- Kid Cooking Lessons  -->
-<!-- Start of the carousel -->
-<p-carousel
-  [value]="lessonsArray"
-  [numVisible]="3"
-  [numScroll]="1"
-  [responsiveOptions]="responsiveOptions"
->
-  <!-- Video category header -->
-  <ng-template pTemplate="header">
-    <h2>Cooking Lessons</h2>
-  </ng-template>
-  <!-- Video carousel -->
-  <ng-template let-product pTemplate="item">
-    <div class="videos-array-container">
-      <div class="video-container" *ngFor="let video of lessonsArray">
-        <youtube-player
-          videoId="{{ video.id }}"
-          suggestedQuality="hd720"
-          [height]="250"
-          [width]="500"
-          [startSeconds]="0"
-          [endSeconds]="100000"
-        >
-        </youtube-player>
-        <h3>{{ video.title }}</h3>
-      </div>
-    </div>
-  </ng-template>
-</p-carousel>
-<!--End of Kid Cooking Lessons Carousel-->
-
-<!-- Breakfast
-<div class="videos-array-container">
-<h2>Breakfast</h2>
-<div class="video-container" *ngFor="let video of breakfastArray">
-  <youtube-player
-    videoId="{{ video.id }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="500"
-    [startSeconds]="0"
-    [endSeconds]="100000"
-  >
-  </youtube-player>
-  <h3>{{ video.title }}</h3>
+<!-- start basics array -->
+<h3 (click)="setShowIndex(1)">Cooking Basics</h3>
+<div *ngIf="showIndex === 1">
+  <div>
+    <p-carousel
+      [value]="basicsArray"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <!-- Video category header -->
+      <ng-template pTemplate="header"> </ng-template>
+      <!-- Video carousel -->
+      <ng-template let-product pTemplate="item">
+        <div class="videos-array-container">
+          <div class="video-container" *ngFor="let video of basicsArray">
+            <youtube-player
+              videoId="{{ video.id }}"
+              suggestedQuality="hd720"
+              [height]="250"
+              [width]="500"
+              [startSeconds]="0"
+              [endSeconds]="100000"
+            >
+            </youtube-player>
+            <h5>{{ video.title }}</h5>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
+<!-- start lesson array -->
+<h3 (click)="setShowIndex(2)">Cooking Lessons</h3>
+<div *ngIf="showIndex === 2">
+  <div>
+    <p-carousel
+      [value]="lessonsArray"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <!-- Video category header -->
+      <ng-template pTemplate="header"> </ng-template>
+      <!-- Video carousel -->
+      <ng-template let-product pTemplate="item">
+        <div class="videos-array-container">
+          <div class="video-container" *ngFor="let video of lessonsArray">
+            <youtube-player
+              videoId="{{ video.id }}"
+              suggestedQuality="hd720"
+              [height]="250"
+              [width]="500"
+              [startSeconds]="0"
+              [endSeconds]="100000"
+            >
+            </youtube-player>
+            <h5>{{ video.title }}</h5>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
-Lunch
-<div class="videos-array-container">
-<h2>Lunch</h2>
-<div class="video-container" *ngFor="let video of lunchArray">
-  <youtube-player
-    videoId="{{ video.id }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="500"
-    [startSeconds]="0"
-    [endSeconds]="100000"
-  >
-  </youtube-player>
-  <h3>{{ video.title }}</h3>
+<!-- start breakfast array -->
+<h3 (click)="setShowIndex(3)">Cooking Breakfast</h3>
+<div *ngIf="showIndex === 3">
+  <div>
+    <p-carousel
+      [value]="breakfastArray"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <!-- Video category header -->
+      <ng-template pTemplate="header"> </ng-template>
+      <!-- Video carousel -->
+      <ng-template let-product pTemplate="item">
+        <div class="videos-array-container">
+          <div class="video-container" *ngFor="let video of breakfastArray">
+            <youtube-player
+              videoId="{{ video.id }}"
+              suggestedQuality="hd720"
+              [height]="250"
+              [width]="500"
+              [startSeconds]="0"
+              [endSeconds]="100000"
+            >
+            </youtube-player>
+            <h5>{{ video.title }}</h5>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
+<!-- start lunch array -->
+<h3 (click)="setShowIndex(4)">Cooking Lunch</h3>
+<div *ngIf="showIndex === 4">
+  <div>
+    <p-carousel
+      [value]="lunchArray"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <!-- Video category header -->
+      <ng-template pTemplate="header"> </ng-template>
+      <!-- Video carousel -->
+      <ng-template let-product pTemplate="item">
+        <div class="videos-array-container">
+          <div class="video-container" *ngFor="let video of lunchArray">
+            <youtube-player
+              videoId="{{ video.id }}"
+              suggestedQuality="hd720"
+              [height]="250"
+              [width]="500"
+              [startSeconds]="0"
+              [endSeconds]="100000"
+            >
+            </youtube-player>
+            <h5>{{ video.title }}</h5>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
-Dinner
-<div class="videos-array-container">
-<h2>Dinner</h2>
-<div class="video-container" *ngFor="let video of dinnerArray">
-  <youtube-player
-    videoId="{{ video.id }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="500"
-    [startSeconds]="0"
-    [endSeconds]="100000"
-  >
-  </youtube-player>
-  <h3>{{ video.title }}</h3>
+<!-- start dinner array -->
+<h3 (click)="setShowIndex(5)">Cooking Dinner</h3>
+<div *ngIf="showIndex === 5">
+  <div>
+    <p-carousel
+      [value]="dinnerArray"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <!-- Video category header -->
+      <ng-template pTemplate="header">
+        <h2>Cooking Dinner</h2>
+      </ng-template>
+      <!-- Video carousel -->
+      <ng-template let-product pTemplate="item">
+        <div class="videos-array-container">
+          <div class="video-container" *ngFor="let video of dinnerArray">
+            <youtube-player
+              videoId="{{ video.id }}"
+              suggestedQuality="hd720"
+              [height]="250"
+              [width]="500"
+              [startSeconds]="0"
+              [endSeconds]="100000"
+            >
+            </youtube-player>
+            <h5>{{ video.title }}</h5>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
+<!-- start snacks array -->
+<h3 (click)="setShowIndex(6)">Making Snacks</h3>
+<div *ngIf="showIndex === 6">
+  <div>
+    <p-carousel
+      [value]="snacksArray"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <!-- Video category header -->
+      <ng-template pTemplate="header"> </ng-template>
+      <!-- Video carousel -->
+      <ng-template let-product pTemplate="item">
+        <div class="videos-array-container">
+          <div class="video-container" *ngFor="let video of snacksArray">
+            <youtube-player
+              videoId="{{ video.id }}"
+              suggestedQuality="hd720"
+              [height]="250"
+              [width]="500"
+              [startSeconds]="0"
+              [endSeconds]="100000"
+            >
+            </youtube-player>
+            <h5>{{ video.title }}</h5>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
-Snacks
-<div class="videos-array-container">
-<h2>Snacks</h2>
-<div class="video-container" *ngFor="let video of snacksArray">
-  <youtube-player
-    videoId="{{ video.id }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="500"
-    [startSeconds]="0"
-    [endSeconds]="100000"
-  >
-  </youtube-player>
-  <h3>{{ video.title }}</h3>
+<!-- start teen array -->
+<h3 (click)="setShowIndex(7)">Cooking for Teens</h3>
+<div *ngIf="showIndex === 7">
+  <div>
+    <p-carousel
+      [value]="teensArray"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <!-- Video category header -->
+      <ng-template pTemplate="header"> </ng-template>
+      <!-- Video carousel -->
+      <ng-template let-product pTemplate="item">
+        <div class="videos-array-container">
+          <div class="video-container" *ngFor="let video of teensArray">
+            <youtube-player
+              videoId="{{ video.id }}"
+              suggestedQuality="hd720"
+              [height]="250"
+              [width]="500"
+              [startSeconds]="0"
+              [endSeconds]="100000"
+            >
+            </youtube-player>
+            <h5>{{ video.title }}</h5>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
+<!-- start college array -->
+<h3 (click)="setShowIndex(8)">Cooking for College Students</h3>
+<div *ngIf="showIndex === 8">
+  <div>
+    <p-carousel
+      [value]="collegeArray"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <!-- Video category header -->
+      <ng-template pTemplate="header"> </ng-template>
+      <!-- Video carousel -->
+      <ng-template let-product pTemplate="item">
+        <div class="videos-array-container">
+          <div class="video-container" *ngFor="let video of collegeArray">
+            <youtube-player
+              videoId="{{ video.id }}"
+              suggestedQuality="hd720"
+              [height]="250"
+              [width]="500"
+              [startSeconds]="0"
+              [endSeconds]="100000"
+            >
+            </youtube-player>
+            <h5>{{ video.title }}</h5>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
-Teens
-<div class="videos-array-container">
-<h2>Teens Cooking</h2>
-<div class="video-container" *ngFor="let video of teensArray">
-  <youtube-player
-    videoId="{{ video.id }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="500"
-    [startSeconds]="0"
-    [endSeconds]="100000"
-  >
-  </youtube-player>
-  <h3>{{ video.title }}</h3>
-  </div
-</div>
-College
-<div class="videos-array-container">
-<h2>College Students Cooking</h2>
-<div class="video-container" *ngFor="let video of collegeArray">
-  <youtube-player
-    videoId="{{ video.id }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="500"
-    [startSeconds]="0"
-    [endSeconds]="100000"
-  >
-  </youtube-player>
-  <h3>{{ video.title }}</h3>
-</div>
-</div> -->

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Videos } from '../interfaces/videos';
-import { RecipeService } from '../recipe.service';
+
 import { VideoService } from '../video.service';
 
 @Component({
@@ -22,7 +22,9 @@ export class CookingVideosComponent implements OnInit {
     numVisible: number;
     numScroll: number;
   }[];
-  // videoId: string | null = null;
+
+  showIndex: number = 1;
+
   constructor(private videoService: VideoService) {
     this.responsiveOptions = [
       {
@@ -73,4 +75,8 @@ export class CookingVideosComponent implements OnInit {
       this.videoService.collegeArray
     );
   }
+
+  setShowIndex = (index: number) => {
+    this.showIndex = index;
+  };
 }
