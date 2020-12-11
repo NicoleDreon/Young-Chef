@@ -20,6 +20,7 @@ import { SliderModule } from 'primeng/slider';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { GalleriaModule } from 'primeng/galleria';
+import { AccordionModule } from 'primeng/accordion';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { GalleriaModule } from 'primeng/galleria';
     ButtonModule,
     CarouselModule,
     GalleriaModule,
+    AccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
