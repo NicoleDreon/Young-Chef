@@ -1,11 +1,52 @@
-<div class="home-container">
-  <a routerLink="">Home</a>
-  <a routerLink="/the_basics" class="home-options basics">The Basics</a>
-  <a routerLink="/search_recipes" class="home-options search-recipes"
-    >Search Recipes</a
-  >
-  <a routerLink="/cooking_videos" class="home-options cooking-videos"
-    >Cooking Videos</a
-  >
-  <a routerLink="/recipe_box" class="home-options recipe-box">Recipe Box</a>
-</div>
+<nav role="navigation" class="navigation">
+  <div class="home-container">
+    <!-- A fake / hidden checkbox is used as click receiver, so you can use the :checked selector on it -->
+    <input type="checkbox" class="checkbox" />
+
+    <!-- Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff. -->
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+
+    <!-- Main menu links/routing -->
+    <ul class="main-menu">
+      <li><a routerLink="/">Home</a></li>
+      <li>
+        <a
+          routerLink="/the_basics"
+          routerLinkActive="basics-link"
+          class="home-options basics"
+          >The Basics</a
+        >
+      </li>
+
+      <li>
+        <a
+          routerLink="/search_recipes"
+          routerLinkActive="search-link"
+          class="home-options search-recipes"
+          >Search Recipes</a
+        >
+      </li>
+
+      <li>
+        <a
+          routerLink="/cooking_videos"
+          routerLinkActive="video-link"
+          class="home-options cooking-videos"
+          >Cooking Videos</a
+        >
+      </li>
+
+      <li>
+        <a
+          routerLink="/recipe_box"
+          routerLinkActive="recipe-box-link"
+          class="home-options recipe-box"
+          >Recipe Box</a
+        >
+      </li>
+    </ul>
+  </div>
+  <!-- End of .home-container -->
+</nav>
