@@ -5,8 +5,8 @@
 }
 
 .home-options {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   text-decoration: none;
   color: black;
   border: black solid 1px;
@@ -16,4 +16,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.basics {
+  background-color: #ffca3a;
+}
+
+.search-recipes {
+  background-color: #f94144;
+}
+
+.cooking-videos {
+  background-color: #6a4c93;
+}
+
+.recipe-box {
+  background-color: #8ac926;
+}
+
+.welcome-container {
+  text-align: center;
+}
+
+/* .galleria-container {
+  border: #1982c4 10px solid;
+} */
+
+.trivia-container {
+  text-align: center;
+  margin: 10px;
 }
