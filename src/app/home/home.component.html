@@ -1,24 +1,27 @@
 <app-header></app-header>
-<h2>Welcome Young Chef!</h2>
-<p>What's cookin' today?</p>
-<p-galleria
-  [value]="randomRecipe"
-  [responsiveOptions]="responsiveOptions"
-  [containerStyle]="{ 'max-width': '800px' }"
-  [numVisible]="1"
-  [showThumbnails]="false"
-  [showIndicators]="true"
-  [changeItemOnIndicatorHover]="true"
-  [showIndicatorsOnItem]="true"
-  [autoPlay]="true"
-  [transitionInterval]="2000"
-  [circular]="true"
->
-  <ng-template pTemplate="item" let-item>
-    <img src="{{ item.image }}" (click)="clickRecipe(item.id)" />
-  </ng-template>
-</p-galleria>
-<p>Did you know? {{ trivia?.text }}</p>
+<div class="welcome-container">
+  <h2>Welcome Young Chef!</h2>
+  <p>What's cookin' today?</p>
+</div>
+<div class="galleria-container">
+  <p-galleria
+    [value]="randomRecipe"
+    [responsiveOptions]="responsiveOptions"
+    [containerStyle]="{ 'max-width': '800px' }"
+    [numVisible]="1"
+    [showThumbnails]="false"
+    [showIndicators]="true"
+    [changeItemOnIndicatorHover]="true"
+    [showIndicatorsOnItem]="true"
+    [autoPlay]="true"
+    [transitionInterval]="2000"
+    [circular]="true"
+  >
+    <ng-template pTemplate="item" let-item>
+      <img src="{{ item.image }}" (click)="clickRecipe(item.id)" />
+    </ng-template>
+  </p-galleria>
+</div>
 <div class="home-container">
   <a routerLink="/the_basics" class="home-options basics">The Basics</a>
   <a routerLink="/search_recipes" class="home-options search-recipes"
@@ -28,4 +31,14 @@
     >Cooking Videos</a
   >
   <a routerLink="/recipe_box" class="home-options recipe-box">Recipe Box</a>
+</div>
+<div class="trivia-container">
+  <p>Did you know?</p>
+  <!-- <p>{{ trivia?.text }}</p> -->
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, minus! Quos
+    asperiores nobis quas ea assumenda iste similique odio dolore sit
+    perferendis, consequuntur porro sed, recusandae, nemo voluptate repellat
+    hic.
+  </p>
 </div>
