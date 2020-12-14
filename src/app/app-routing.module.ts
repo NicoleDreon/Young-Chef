@@ -9,13 +9,12 @@ import { SearchRecipesComponent } from './search-recipes/search-recipes.componen
 import { TheBasicsComponent } from './the-basics/the-basics.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
   { path: 'search_recipes', component: SearchRecipesComponent },
   { path: 'the_basics', component: TheBasicsComponent },
   { path: 'recipe_box', component: RecipeBoxComponent },
   { path: 'cooking_videos', component: CookingVideosComponent },
   { path: 'recipe', component: RecipeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '', pathMatch: 'full', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 
