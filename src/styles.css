@@ -3,3 +3,13 @@ div {
   margin: 0px;
   padding: 0px;
 }
+
+h1,
+h2 {
+  font-family: "Balsamiq Sans", cursive;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
