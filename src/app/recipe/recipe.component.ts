@@ -47,6 +47,7 @@ export class RecipeComponent implements OnInit {
       console.log(item);
       if (!this.uniqueTools.includes(item.name)) {
         this.uniqueTools.push(item.name);
+        // this.uniqueTools.push(item.image);
       }
     });
     console.log(this.uniqueTools);
