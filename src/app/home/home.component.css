@@ -68,7 +68,7 @@
 }
 
 /******* MEDIA QUERIES *******/
-@media all and (min-width: 778px) {
+@media all and (min-width: 768px) {
   .welcome-container {
     margin-top: 10px;
   }

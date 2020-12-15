@@ -1,0 +1,35 @@
+.recipe-container {
+  align-items: center;
+  left: 15%;
+  padding-bottom: 10px;
+  margin-top: 50px;
+  width: 70%;
+  border: 5px #8ac926 solid;
+  border-radius: 13px;
+  position: relative;
+  max-width: 400px;
+}
+.recipe-container:hover {
+    box-shadow: 1px 1px 5px #8ac926;
+  }
+
+  .title-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    padding-bottom: 10px;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
+
+  .fa-trash {
+    color: #8ac926;
+  }

@@ -1,7 +1,16 @@
 <div class="recipe-container">
   <img src="{{ recipe.image }}" alt="" (click)="clickRecipe(recipe.id)" />
   <div class="title-card">
-    <p class="recipie-title">{{ recipe.title }}</p>
-    <i class="far fa-heart" (click)="toggleFavorites()"></i>
+    <p class="recipe-title">{{ recipe.title }}</p>
+    <i
+      class="far fa-heart"
+      *ngIf="!recipe.isFavorite"
+      (click)="toggleFavorites()"
+    ></i>
+    <i
+      class="fas fa-heart"
+      *ngIf="recipe.isFavorite"
+      (click)="toggleFavorites()"
+    ></i>
   </div>
 </div>

@@ -1,5 +1,11 @@
 <div *ngFor="let favorite of favorites">
-  <img src="{{ favorite.image }}" alt="" (click)="clickRecipe(favorite.id)" />
-  <p>{{ favorite.title }}</p>
-  <button (click)="removeFavorite(favorite)">x</button>
+  <div class="recipe-container">
+    <img src="{{ favorite.image }}" alt="" (click)="clickRecipe(favorite.id)" />
+    <div class="title-card">
+      <p>{{ favorite.title }}</p>
+      <button (click)="removeFavorite(favorite)">
+        <i class="fas fa-trash"></i>
+      </button>
+    </div>
+  </div>
 </div>
