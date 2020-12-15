@@ -2,7 +2,6 @@ import { RecipeService } from '../recipe.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecipeBox } from '../interfaces/recipe-box';
-import { logging } from 'protractor';
 
 @Component({
   selector: 'app-recipe',
@@ -13,6 +12,9 @@ export class RecipeComponent implements OnInit {
   recipeInfo: any | null = null;
   recipeTools: any | null = null;
   uniqueTools: any[] = [];
+  favorites: RecipeBox[] = [];
+  recipe: any | null;
+  isFavorite: boolean = false;
   @Output() favoriteEvent = new EventEmitter<RecipeBox>();
   constructor(
     private route: ActivatedRoute,
@@ -28,6 +30,7 @@ export class RecipeComponent implements OnInit {
           .subscribe((res: any) => {
             this.recipeInfo = res;
             console.log(res);
+            this.checkFavorites();
           }) &&
           this.recipeService
             .getRecipeEquipment(parseInt(id))
@@ -40,6 +43,7 @@ export class RecipeComponent implements OnInit {
         console.log('no term');
       }
     });
+    this.favorites = this.recipeService.getFavorites();
   } // End of on init //
 
   getUniqueTools = (toolsArray: any[]) => {
@@ -70,5 +74,13 @@ export class RecipeComponent implements OnInit {
     console.log(favoriteRecipe);
     // this.favoriteEvent.emit(favoriteRecipe);
     this.recipeService.editFavorites(favoriteRecipe);
+    this.favorites = this.recipeService.getFavorites();
+    this.checkFavorites();
+  };
+
+  checkFavorites = (): void => {
+    this.isFavorite = this.favorites.some((item) => {
+      return item.id === this.recipeInfo.id;
+    });
   };
 } // End of export //

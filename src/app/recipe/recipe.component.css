@@ -89,6 +89,12 @@ a:link {
   font-size: 200%;
   margin-right: 20px;
 }
+.black {
+  color: black;
+}
+.red {
+  color: #f94144
+}
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .recipe-content {

@@ -27,7 +27,12 @@ img {
 .fa-heart {
   font-size: 20px;
 }
-
+.black{
+  color: black;
+}
+.red {
+  color: #f44336;
+}
 @media only screen and (min-width: 768px){
 
   .title-card {
