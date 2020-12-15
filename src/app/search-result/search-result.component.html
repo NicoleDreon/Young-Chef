@@ -3,13 +3,13 @@
   <div class="title-card">
     <p class="recipe-title">{{ recipe.title }}</p>
     <i
-      class="far fa-heart"
-      *ngIf="!recipe.isFavorite"
+      class="far fa-heart black"
+      *ngIf="!favorites.includes(recipe)"
       (click)="toggleFavorites()"
     ></i>
     <i
-      class="fas fa-heart"
-      *ngIf="recipe.isFavorite"
+      class="far fa-heart red"
+      *ngIf="favorites.includes(recipe)"
       (click)="toggleFavorites()"
     ></i>
   </div>
