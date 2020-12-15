@@ -8,8 +8,8 @@
     />
   </div>
   <div class="welcome">
-    <h2>Welcome Young Chef!</h2>
-    <p>What's cookin' today?</p>
+    <h2 class="welcome-text">Welcome Young Chef!</h2>
+    <p class="welcome-subtitle">What's cookin' today?</p>
   </div>
 </div>
 <div class="galleria-container">
@@ -26,21 +26,23 @@
     [transitionInterval]="2000"
     [circular]="true"
   >
-    <ng-template pTemplate="item" let-item>
-      <img src="{{ item.image }}" (click)="clickRecipe(item.id)" />
+    <ng-template pTemplate="item" let-item class="random-image-container">
+      <img
+        src="{{ item.image }}"
+        (click)="clickRecipe(item.id)"
+        class="random-recipe-image"
+      />
     </ng-template>
   </p-galleria>
 </div>
 <div class="home-container">
-  <a routerLink="/the_basics" class="home-options basics glow-on-hover"
+  <a routerLink="/the_basics" class="home-options basics btn first"
     >The Basics</a
   >
   <a routerLink="/search_recipes" class="home-options search-recipes btn third"
     >Search Recipes</a
   >
-  <a
-    routerLink="/cooking_videos"
-    class="home-options cooking-videos glow-on-hover2"
+  <a routerLink="/cooking_videos" class="home-options cooking-videos btn second"
     >Cooking Videos</a
   >
   <a routerLink="/recipe_box" class="home-options recipe-box btn fourth"
