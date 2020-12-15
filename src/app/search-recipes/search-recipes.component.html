@@ -1,31 +1,38 @@
 <app-header></app-header>
-<form #searchForm="ngForm" (ngSubmit)="searchRecipes(searchForm)">
-  <!-- <label for="recipeSearch">Search Recipes</label> -->
-  <input
-    type="text"
-    name="recipeSearch"
-    id="recipeSearch"
-    placeholder="Search Recipes"
-    ngModel
-  />
-  <button>Search</button>
-</form>
-<!-- # of Ingredients filter/slider -->
-<!-- <p>Number of Ingredients: {{ val2 }}</p>
-<p-slider [min]="0" [max]="20"></p-slider> -->
-<!-- (onChange)="setNumberOfIngredients($event.value)" -->
-
-<!-- Ready in minutes filter/slider -->
-<p>Time to make: {{ minutesVal }} minutes</p>
-<p-slider
-  [(ngModel)]="minutesVal"
-  (onChange)="setNumberOfMinutes($event.value)"
-  [min]="20"
-  [max]="160"
-></p-slider>
-
+<div class="search-container">
+  <div class="form-container">
+    <form
+      class="form"
+      #searchForm="ngForm"
+      (ngSubmit)="searchRecipes(searchForm)"
+    >
+      <!-- <label for="recipeSearch">Search Recipes</label> -->
+      <input
+        class="input"
+        type="text"
+        name="recipeSearch"
+        id="recipeSearch"
+        placeholder="Search Recipes"
+        ngModel
+      />
+      <button class="btn"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+  <!-- Ready in minutes filter/slider -->
+  <p class="time">Time to make: {{ minutesVal }} minutes</p>
+  <div class="slider">
+    <p-slider
+      [(ngModel)]="minutesVal"
+      (onChange)="setNumberOfMinutes($event.value)"
+      [min]="20"
+      [max]="160"
+    ></p-slider>
+  </div>
+</div>
 <!-- Search Results show below -->
-<app-search-result
-  *ngFor="let recipe of filterRecipes()"
-  [recipe]="recipe"
-></app-search-result>
+<div class="recipies">
+  <app-search-result
+    *ngFor="let recipe of filterRecipes()"
+    [recipe]="recipe"
+  ></app-search-result>
+</div>
