@@ -1,36 +1,78 @@
 <app-header></app-header>
 <div>
   <img src="{{ recipeInfo?.image }}" alt="" />
-  <i class="far fa-heart" (click)="toggleFavorites()"></i>
-  <h2>{{ recipeInfo?.title }}</h2>
-  <!-- <p>{{ recipeInfo.summary }}</p> -->
-  <p>Difficulty Rating</p>
-  <div>
-    <ul *ngFor="let info of recipeInfo?.extendedIngredients">
-      <li>{{ info.original }}</li>
-    </ul>
-    <p>Number of Ingredients</p>
+  <div class="recipe-info">
+    <div class="recipe-header">
+      <h1 class="recipe-title">{{ recipeInfo?.title }}*</h1>
+      <i class="far fa-heart" (click)="toggleFavorites()"></i>
+    </div>
+    <!-- <p>{{ recipeInfo.summary }}</p> -->
+    <p class="ready-in">Ready in {{ recipeInfo?.readyInMinutes }} minutes</p>
+    <!-- <p class="difficulty">Difficulty Rating</p> -->
+    <div class="ingredient-info">
+      <div>
+        <div class="ingredients-header">
+          <div class="ingredient-title-and-tips">
+            <h2 class="ingredient-list-title">Ingredient List:</h2>
+            <p class="checkbox-tips">
+              Use the checkboxs below to mark off ingredients once you use them
+              or as a shoping list!
+            </p>
+          </div>
+          <div class="num-ingredients-container">
+            <p class="num-ingredients">Number of Ingredients</p>
+            <p class="num">
+              {{ recipeInfo?.extendedIngredients.length }}
+            </p>
+          </div>
+        </div>
+        <ul
+          class="ingredients-list"
+          *ngFor="let info of recipeInfo?.extendedIngredients"
+        >
+          <li><input type="checkbox" /> {{ info.original }}</li>
+        </ul>
+      </div>
+      <!-- End of ingredient list div -->
+    </div>
+    <!-- End of ingredients info div -->
+
+    <div class="tool-serving-div">
+      <div>
+        <h2 class="tools-needed-title">Tools Needed:</h2>
+        <ul>
+          <li *ngFor="let tool of uniqueTools">
+            {{ tool }}
+            <!-- <img src="{{ tool?.image }}" alt="" /> -->
+          </li>
+        </ul>
+      </div>
+      <div class="serving-size">
+        <p>Number of Servings</p>
+        <p class="serving-size-number">{{ recipeInfo?.servings }}</p>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="step-instructions">Step by Step Instructions</h2>
+      <ol>
+        <li *ngFor="let step of recipeInfo?.analyzedInstructions[0].steps">
+          {{ step.step }}
+        </li>
+      </ol>
+    </div>
+    <!-- End of step by step instructions div-->
+    <p>
+      <a
+        href="{{ recipeInfo?.sourceUrl }}"
+        target="_blank"
+        class="original-recipe"
+        >View Original Recipe</a
+      >
+    </p>
+    <p class="disclaimer">
+      *Safety Check: This recipe may contain tool and/or ingredients that
+      require adult supervision.
+    </p>
   </div>
-  <!-- End of ingredients list div -->
-  <p>Ready in {{ recipeInfo?.readyInMinutes }} minutes</p>
-  <p>Number of Servings: {{ recipeInfo?.servings }}</p>
-  <div>
-    <h2>Tools Needed</h2>
-    <ul>
-      <li *ngFor="let tool of uniqueTools">
-        {{ tool }}
-        <!-- <img src="{{ tool.image }}" alt="" /> -->
-      </li>
-    </ul>
-  </div>
-  <div>
-    <h2>Step by Step Instructions</h2>
-    <ol>
-      <li *ngFor="let step of recipeInfo?.analyzedInstructions[0].steps">
-        {{ step.step }}
-      </li>
-    </ol>
-  </div>
-  <!-- End of step by step instructions div-->
-  <p><a href="{{ recipeInfo?.sourceUrl }}">View Original Recipe</a></p>
 </div>
