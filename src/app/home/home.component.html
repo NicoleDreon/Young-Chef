@@ -1,7 +1,16 @@
 <app-header></app-header>
 <div class="welcome-container">
-  <h2>Welcome Young Chef!</h2>
-  <p>What's cookin' today?</p>
+  <div>
+    <img
+      src="/assets/Young-Chef-Icon2.png"
+      alt="Young Chef Mobile Logo"
+      class="logo-mobile"
+    />
+  </div>
+  <div class="welcome">
+    <h2>Welcome Young Chef!</h2>
+    <p>What's cookin' today?</p>
+  </div>
 </div>
 <div class="galleria-container">
   <p-galleria
@@ -23,22 +32,31 @@
   </p-galleria>
 </div>
 <div class="home-container">
-  <a routerLink="/the_basics" class="home-options basics">The Basics</a>
-  <a routerLink="/search_recipes" class="home-options search-recipes"
+  <a routerLink="/the_basics" class="home-options basics glow-on-hover"
+    >The Basics</a
+  >
+  <a routerLink="/search_recipes" class="home-options search-recipes btn third"
     >Search Recipes</a
   >
-  <a routerLink="/cooking_videos" class="home-options cooking-videos"
+  <a
+    routerLink="/cooking_videos"
+    class="home-options cooking-videos glow-on-hover2"
     >Cooking Videos</a
   >
-  <a routerLink="/recipe_box" class="home-options recipe-box">Recipe Box</a>
+  <a routerLink="/recipe_box" class="home-options recipe-box btn fourth"
+    >Recipe Box</a
+  >
 </div>
+
 <div class="trivia-container">
-  <p>Did you know?</p>
-  <!-- <p>{{ trivia?.text }}</p> -->
-  <p>
+  <p class="trivia-header">Did you know?</p>
+  <p class="trivia-text">{{ trivia?.text }}</p>
+  <!-- <p class="trivia-text">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, minus! Quos
     asperiores nobis quas ea assumenda iste similique odio dolore sit
     perferendis, consequuntur porro sed, recusandae, nemo voluptate repellat
     hic.
-  </p>
+  </p> -->
 </div>
+
+<app-footer></app-footer>

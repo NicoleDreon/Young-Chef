@@ -12,11 +12,11 @@ export class RecipeService {
   triviaURL: string = 'https://api.spoonacular.com/food/trivia/random';
 
   // apiKey: string = '7ed03fd3e48b465985205b580d3d8763'; // Phil
-  // apiKey: string = '1e0e6ac413064d44ad1312d4c942f92a'; // Leslie
+  apiKey: string = '1e0e6ac413064d44ad1312d4c942f92a'; // Leslie
   // apiKey: string = '64b2bbdba0214d90aa607e25138b53e8'; // Nicole
   // apiKey: string = 'ed4e188160314292ab3ffe3a174eec84'; // Kyle
   // apiKey: string = 'b2bd2bc172c74f2cadc8befb3201513e'; //kyle2
-  apiKey: string = '49fd1627458b4a2284c2a4ba1e72a698'; // Leslie2
+  // apiKey: string = '49fd1627458b4a2284c2a4ba1e72a698'; // Leslie2
 
   // uniqueTools: any[] = [];
 

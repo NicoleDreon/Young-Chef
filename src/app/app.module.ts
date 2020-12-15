@@ -21,6 +21,7 @@ import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { GalleriaModule } from 'primeng/galleria';
 import { AccordionModule } from 'primeng/accordion';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AccordionModule } from 'primeng/accordion';
     PageNotFoundComponent,
     SearchResultComponent,
     FavoriteRecipeComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
