@@ -92,6 +92,9 @@
   .trivia-container {
     margin-bottom: 60px;
   }
+  .welcome {
+    font-size: 150%;
+  }
   .welcome-text {
     margin-bottom: 5px;
   }

@@ -103,6 +103,7 @@ a:link {
   .recipe-header-media-query {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .hover-steps:hover {
     background-color: #8ac926;
@@ -122,6 +123,7 @@ a:link {
   .recipe-header-media-query {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .hover-steps:hover {
     background-color: #8ac926;
