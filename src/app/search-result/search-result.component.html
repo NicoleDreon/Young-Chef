@@ -1,7 +1,7 @@
 <div class="recipe-container">
   <img src="{{ recipe.image }}" alt="" (click)="clickRecipe(recipe.id)" />
-  <div class="title">
-    <p>{{ recipe.title }}</p>
+  <div class="title-card">
+    <p class="recipie-title">{{ recipe.title }}</p>
     <i class="far fa-heart" (click)="toggleFavorites()"></i>
   </div>
 </div>

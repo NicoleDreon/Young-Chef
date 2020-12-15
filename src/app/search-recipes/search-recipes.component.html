@@ -20,14 +20,16 @@
       </form>
     </div>
     <!-- Ready in minutes filter/slider -->
-    <p class="time">Time to make: {{ minutesVal }} minutes</p>
-    <!-- <div class="slider"> -->
-    <p-slider
-      [(ngModel)]="minutesVal"
-      (onChange)="setNumberOfMinutes($event.value)"
-      [min]="20"
-      [max]="160"
-    ></p-slider>
+    <div class="slider-div">
+      <p class="time">Time to make: {{ minutesVal }} minutes</p>
+      <!-- <div class="slider"> -->
+      <p-slider
+        [(ngModel)]="minutesVal"
+        (onChange)="setNumberOfMinutes($event.value)"
+        [min]="20"
+        [max]="160"
+      ></p-slider>
+    </div>
     <!-- </div> -->
   </div>
   <!-- Search Results show below -->

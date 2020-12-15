@@ -1,6 +1,6 @@
 .main {
+  /* padding-top: 50px; */
   margin: 0 auto;
-  max-width: 1200px;
 }
 .search-container {
   display: flex;
@@ -9,7 +9,9 @@
 }
 .form-container {
   display: flex;
-  align-self: center;
+  justify-content: flex-end;
+  position: absolute;
+  right: 13px;
 }
 .form {
   display: flex;
@@ -20,6 +22,10 @@
 
 .time {
   margin-bottom: 10px;
+}
+
+.slider-div {
+  padding-top: 50px;
 }
 
 img {
@@ -42,6 +48,10 @@ img {
 }
 
 @media only screen and (min-width: 778px){
+  .main {
+    max-width: 1200px;
+  }
+
   .form {
     width: 100%;
     padding: 50px 0px 40px 30px;
@@ -50,6 +60,7 @@ img {
   .form-container {
     display: flex;
     align-self: center;
+    position: static;
   }
 
   .input {
@@ -66,11 +77,16 @@ img {
     /* border: 4px solid #d31e1e; */
     outline: none;
   }
-/* 
-  .slider {
-    position: relative;
-    left: 20%;
-  } */
+
+  .slider-div {
+    padding: 0;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .recipe-title {
+    padding-right: 40px;
+  }
 
   .recipies {
       display: flex;
