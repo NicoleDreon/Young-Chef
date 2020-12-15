@@ -87,7 +87,7 @@ export class RecipeService {
     return this.http.get(this.randomURL, {
       params: {
         apiKey: this.apiKey,
-        number: '1',
+        number: '6',
       },
     });
   }; // End of getRandomRecipe

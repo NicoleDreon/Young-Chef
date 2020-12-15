@@ -47,7 +47,7 @@ img {
   color: white;
 }
 
-@media only screen and (min-width: 778px){
+@media only screen and (min-width: 768px){
   .main {
     max-width: 1200px;
   }
@@ -90,5 +90,6 @@ img {
 
   .recipies {
       display: flex;
+      flex-wrap: wrap;
   }
 }
