@@ -118,7 +118,7 @@
 }
 
 /******* MEDIA QUERIES *******/
-@media all and (min-width: 778px) {
+@media all and (min-width: 768px) {
   .navigation {
     display: flex;
     /* justify-content: space-between; */

@@ -104,6 +104,10 @@ a:link {
     display: flex;
     justify-content: space-between;
   }
+  .hover-steps:hover {
+    background-color: #8ac926;
+    color: white;
+  }
 }
 @media all and (min-width: 1025px) {
   .recipe-content {
@@ -122,5 +126,8 @@ a:link {
   .hover-steps:hover {
     background-color: #8ac926;
     color: white;
+  }
+  .disclaimer {
+    display: flex;
   }
 }
