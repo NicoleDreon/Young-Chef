@@ -1,11 +1,15 @@
 <app-header></app-header>
-<div>
-  <img src="{{ recipeInfo?.image }}" alt="" />
+<div class="recipe-content">
+  <div class="recipe-header-mobile">
+    <h1 class="recipe-title">{{ recipeInfo?.title }}*</h1>
+    <i class="far fa-heart" (click)="toggleFavorites()"></i>
+  </div>
+  <img src="{{ recipeInfo?.image }}" alt="" class="image" />
+  <div class="recipe-header-media-query">
+    <h1 class="recipe-title">{{ recipeInfo?.title }}*</h1>
+    <i class="far fa-heart" (click)="toggleFavorites()"></i>
+  </div>
   <div class="recipe-info">
-    <div class="recipe-header">
-      <h1 class="recipe-title">{{ recipeInfo?.title }}*</h1>
-      <i class="far fa-heart" (click)="toggleFavorites()"></i>
-    </div>
     <!-- <p>{{ recipeInfo.summary }}</p> -->
     <p class="ready-in">Ready in {{ recipeInfo?.readyInMinutes }} minutes</p>
     <!-- <p class="difficulty">Difficulty Rating</p> -->
@@ -13,8 +17,8 @@
       <div>
         <div class="ingredients-header">
           <div class="ingredient-title-and-tips">
-            <h2 class="ingredient-list-title">Ingredient List:</h2>
-            <p class="checkbox-tips">
+            <h2 class="ingredient-list-title">Ingredient List</h2>
+            <p class="tips">
               Use the checkboxs below to mark off ingredients once you use them
               or as a shopping list!
             </p>
@@ -55,8 +59,12 @@
 
     <div>
       <h2 class="step-instructions">Step by Step Instructions</h2>
+      <p class="tips">Be sure to wash your hands before getting started.</p>
       <ol>
-        <li *ngFor="let step of recipeInfo?.analyzedInstructions[0].steps">
+        <li
+          class="hover-steps"
+          *ngFor="let step of recipeInfo?.analyzedInstructions[0].steps"
+        >
           {{ step.step }}
         </li>
       </ol>
@@ -76,3 +84,4 @@
     </p>
   </div>
 </div>
+<app-footer></app-footer>
