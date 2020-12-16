@@ -1,21 +1,31 @@
 .recipe-info {
   margin: 10px;
 }
-.recipe-header-mobile {
+.recipe-header-media-query {
   display: flex;
   justify-content: space-between;
-  margin-left: 57px;
+  /* margin-left: 57px; */
+  align-items: center;
+  flex-direction: column-reverse;
 }
-.recipe-header-media-query {
+.recipe-header-mobile {
   display: none;
 }
 .image {
   width: 100%;
 }
+.title-and-heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 60px;  
+}
 
 .recipe-title {
   color: #f94144;
   float: right;
+  margin-right: 25px;
+  padding-left: 10px;
 }
 .ready-in {
   border-bottom: 2px #759ab1 solid;
@@ -107,33 +117,54 @@ a:link {
     margin-bottom: 55px;
     /* background-color: rgb(238, 238, 227, 0.3); */
   }
-  .recipe-header-mobile {
+  /* .recipe-header-mobile {
     display: none;
-  }
+  } */
   .recipe-header-media-query {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    max-width: 700px;
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+  .title-and-heart {
+    padding-top: 20px;
+    margin: 0;
   }
   .hover-steps:hover {
     background-color: #8ac926;
     color: white;
   }
+  .black {
+    color: black;
+  }
+  .red {
+    color: #f94144;
+  }
+  
 }
 @media all and (min-width: 1025px) {
   .recipe-content {
-    margin-left: 100px;
-    margin-right: 100px;
     margin-bottom: 55px;
+    max-width: 1200px;
+    margin: 0 auto;
     /* background-color: rgb(238, 238, 227, 0.3); */
   }
-  .recipe-header-mobile {
-    display: none;
-  }
+ 
   .recipe-header-media-query {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    max-width: 900px;
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+  .title-and-heart {
+    margin: 0;
+    padding-top: 20px;
   }
   .hover-steps:hover {
     background-color: #8ac926;
@@ -142,4 +173,11 @@ a:link {
   .disclaimer {
     display: flex;
   }
+  .black {
+    color: black;
+  }
+  .red {
+    color: #f94144;
+  }
+  
 }

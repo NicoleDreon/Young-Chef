@@ -2,23 +2,25 @@
 <div class="recipe-content">
   <div class="recipe-header-mobile">
     <h1 class="recipe-title">{{ recipeInfo?.title }}*</h1>
-    <i class="far fa-heart" (click)="toggleFavorites()"></i>
+    <!-- <i class="far fa-heart" (click)="toggleFavorites()"></i> -->
   </div>
-  <img src="{{ recipeInfo?.image }}" alt="" class="image" />
   <div class="recipe-header-media-query">
-    <h1 class="recipe-title">{{ recipeInfo?.title }}*</h1>
-    <i
-      class="far fa-heart black"
-      [ngClass]="{ black: !isFavorite }"
-      *ngIf="!isFavorite"
-      (click)="toggleFavorites()"
-    ></i>
-    <i
-      class="far fa-heart red"
-      [ngClass]="{ red: isFavorite }"
-      *ngIf="isFavorite"
-      (click)="toggleFavorites()"
-    ></i>
+    <img src="{{ recipeInfo?.image }}" alt="" class="image" />
+    <div class="title-and-heart">
+      <h1 class="recipe-title">{{ recipeInfo?.title }}*</h1>
+      <i
+        class="far fa-heart black"
+        [ngClass]="{ black: !isFavorite }"
+        *ngIf="!isFavorite"
+        (click)="toggleFavorites()"
+      ></i>
+      <i
+        class="far fa-heart red"
+        [ngClass]="{ red: isFavorite }"
+        *ngIf="isFavorite"
+        (click)="toggleFavorites()"
+      ></i>
+    </div>
   </div>
   <div class="recipe-info">
     <!-- <p>{{ recipeInfo.summary }}</p> -->
