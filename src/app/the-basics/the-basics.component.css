@@ -30,6 +30,10 @@
   width: 80%;
 }
 
+.modal-content {
+  width: 100%;
+}
+
 .close {
   position: absolute;
   top: -20px;
@@ -46,10 +50,6 @@
   background-color: #ffca3a;
   color: #000;
   border-radius: 10px;
-}
-
-.modal-content {
-  width: 100%;
 }
 
 #myImg {
@@ -130,6 +130,6 @@
     cursor: pointer;
   }
   .modal-content {
-    max-width: 600px;
+    max-width: 450px;
   }
 } /* End of min-width: 1025px Media Queries */
