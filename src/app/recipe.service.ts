@@ -11,7 +11,17 @@ export class RecipeService {
   randomURL: string = 'https://api.spoonacular.com/recipes/random';
   triviaURL: string = 'https://api.spoonacular.com/food/trivia/random';
 
-  apiKey: string = '7ed03fd3e48b465985205b580d3d8763'; // Phil
+  apiKeys: string[] = [
+    '7ed03fd3e48b465985205b580d3d8763',
+    '1e0e6ac413064d44ad1312d4c942f92a',
+    '64b2bbdba0214d90aa607e25138b53e8',
+    'ed4e188160314292ab3ffe3a174eec84',
+    'b2bd2bc172c74f2cadc8befb3201513e',
+    '49fd1627458b4a2284c2a4ba1e72a698',
+    '8fcd393b4f8148959ad1a8c9064eb2c2',
+  ]; // Phil
+  counter = 0;
+  apiKey: string = this.apiKeys[this.counter];
   // apiKey: string = '1e0e6ac413064d44ad1312d4c942f92a'; // Leslie
   // apiKey: string = '64b2bbdba0214d90aa607e25138b53e8'; // Nicole
   // apiKey: string = 'ed4e188160314292ab3ffe3a174eec84'; // Kyle
@@ -88,8 +98,19 @@ export class RecipeService {
     return this.http.get(this.randomURL, {
       params: {
         apiKey: this.apiKey,
-        number: '6',
+        number: '10',
       },
     });
-  }; // End of getRandomRecipe
+  };
+
+  changeApiKey = () => {
+    if (this.counter === this.apiKeys.length) {
+      this.counter = 0;
+      this.apiKey = this.apiKeys[this.counter];
+    } else {
+      this.counter++;
+      this.apiKey = this.apiKeys[this.counter];
+    }
+  };
+  // End of getRandomRecipe
 } // End of export

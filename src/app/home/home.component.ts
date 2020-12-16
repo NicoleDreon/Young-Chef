@@ -32,15 +32,9 @@ export class HomeComponent implements OnInit {
   constructor(private recipeService: RecipeService, private router: Router) {}
 
   ngOnInit(): void {
-    this.recipeService.getRandomRecipe().subscribe((res: any) => {
-      this.randomRecipe = res.recipes;
-      console.log(res);
-    });
-    this.recipeService.getTrivia().subscribe((trivia: any) => {
-      this.trivia = trivia;
-      console.log(trivia);
-    });
+    this.getRandomRecipe();
   }
+
   clickRecipe = (id: number): void => {
     this.router.navigate(['/recipe'], {
       queryParams: {
@@ -50,15 +44,66 @@ export class HomeComponent implements OnInit {
     console.log(id);
   };
 
-  //-------- future reference timer funciton -------------
-  //   timeout = () => {
-  //     setTimeout(() => {
-  //       if (this.counter === this.randomRecipe.length) {
-  //         this.counter = 0;
-  //       } else {
-  //         this.counter++;
-  //       }
-  //       this.timeout();
-  //     }, 3000);
-  //   };
+  getRandomRecipe = () => {
+    this.recipeService.getRandomRecipe().subscribe(
+      (res: any) => {
+        this.randomRecipe = res.recipes;
+        this.getTrivia();
+      },
+      (error: any) => {
+        this.recipeService.changeApiKey();
+        this.recipeService.getRandomRecipe().subscribe((res: any) => {
+          this.randomRecipe = res.recipes;
+          this.getTrivia();
+        }),
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.randomRecipe = res.recipes;
+              this.getTrivia();
+            });
+          },
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.randomRecipe = res.recipes;
+              this.getTrivia();
+            });
+          },
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.randomRecipe = res.recipes;
+              this.getTrivia();
+            });
+          },
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.randomRecipe = res.recipes;
+              this.getTrivia();
+            });
+          },
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.randomRecipe = res.recipes;
+              this.getTrivia();
+            });
+          };
+      }
+    );
+  };
+
+  getTrivia = () => {
+    this.recipeService.getTrivia().subscribe(
+      (trivia: any) => {
+        this.trivia = trivia;
+        console.log(trivia);
+      },
+      (error: any) => {
+        this.recipeService.changeApiKey();
+      }
+    );
+  };
 }
