@@ -17,6 +17,7 @@ export class RecipeService {
   // apiKey: string = 'ed4e188160314292ab3ffe3a174eec84'; // Kyle
   apiKey: string = 'b2bd2bc172c74f2cadc8befb3201513e'; //kyle2
   // apiKey: string = '49fd1627458b4a2284c2a4ba1e72a698'; // Leslie2
+  apiKey: string = '8fcd393b4f8148959ad1a8c9064eb2c2'; // Phil 2
 
   // uniqueTools: any[] = [];
 

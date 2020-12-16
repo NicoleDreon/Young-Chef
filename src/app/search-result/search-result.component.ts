@@ -12,11 +12,14 @@ export class SearchResultComponent implements OnInit {
   @Input() recipe: any;
   // @Input() recipeInfo: any | null;
   // @Input() uniqueTools: any[] = [];
+  favorites: RecipeBox[] = [];
   val: number | null = null;
   val2: number | null = null;
   constructor(private router: Router, private recipeService: RecipeService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.favorites = this.recipeService.getFavorites();
+  }
 
   clickRecipe = (id: number): void => {
     this.router.navigate(['/recipe'], {

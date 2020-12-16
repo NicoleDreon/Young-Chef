@@ -59,6 +59,7 @@ ul.ingredients-list {
   justify-content: center;
   font-size: 150%;
 }
+
 .ingredient-list-title {
   color: #ffca3a;
 }
@@ -88,6 +89,13 @@ a:link {
 .fa-heart {
   font-size: 200%;
   margin-right: 20px;
+  cursor: pointer;
+}
+.black {
+  color: black;
+}
+.red {
+  color: #f94144;
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -103,6 +111,7 @@ a:link {
   .recipe-header-media-query {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .hover-steps:hover {
     background-color: #8ac926;
@@ -122,6 +131,7 @@ a:link {
   .recipe-header-media-query {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .hover-steps:hover {
     background-color: #8ac926;

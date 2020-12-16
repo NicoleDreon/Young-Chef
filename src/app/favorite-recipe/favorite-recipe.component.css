@@ -10,26 +10,32 @@
   max-width: 400px;
 }
 .recipe-container:hover {
-    box-shadow: 1px 1px 5px #8ac926;
-  }
+  box-shadow: 1px 1px 5px #8ac926;
+}
 
-  .title-card {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 20px;
-  }
+.title-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  cursor: pointer;
+}
 
-  img {
-    width: 100%;
-    border-radius: 8px;
-    padding-bottom: 10px;
-  }
+img {
+  width: 100%;
+  border-radius: 8px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
 
-  button {
-    border: none;
-    background-color: transparent;
-  }
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
-  .fa-trash {
-    color: #8ac926;
-  }
+.fa-trash {
+  color: #8ac926;
+}
+
+.favorite-title-text {
+}
