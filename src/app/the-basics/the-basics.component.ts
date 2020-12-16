@@ -11,16 +11,16 @@ export class TheBasicsComponent implements OnInit {
   currentImage: any;
   healthSafety = [
     {
+      src: '/assets/Kitchen Safety/10-Least-Wanted-Poster-English.jpg',
+      alt: 'Fight BAC',
+    },
+    {
       src: '/assets/Kitchen Safety/Cutting_Boards_and_Food_Safety.jpg',
       alt: 'Cutting Board Safety',
     },
     {
       src: '/assets/Kitchen Safety/How to Sanitize vs Disinfect.jpg',
       alt: 'How to Sanitize vs Disinfect',
-    },
-    {
-      src: '/assets/Kitchen Safety/10-Least-Wanted-Poster-English.jpg',
-      alt: 'Fight BAC',
     },
     {
       src: '/assets/Kitchen Safety/BFS_ChillAd.jpg',
