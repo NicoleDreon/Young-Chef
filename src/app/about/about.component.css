@@ -16,11 +16,35 @@
 
 .about-section {
   padding: 50px;
-  text-align: center;
+  text-align: stretch;
   background-color: #474e5d;
   color: white;
 }
-
+.test {
+  display: flex;
+}
+.test2 {
+  margin-left: 10px;
+}
+.about {
+  margin-top: 10px;
+  font-size: 130%;
+}
+.intro {
+  /* color: #ffca3a; */
+  /* font-size: 150%; */
+}
+.started {
+  /* font-size: 150%; */
+}
+.tech {
+  color: #8ac926;
+  padding-top: 10px;
+  font-size: 100%;
+}
+/* .about:hover {
+  color: #f94144;
+} */
 .container {
   padding: 0 16px;
 }
@@ -34,6 +58,7 @@
 .team-title {
   text-align: center;
   margin-top: 10px;
+  color: #1982c4;
 }
 
 .title {
@@ -88,4 +113,7 @@ a {
     display: flex;
     flex-direction: row;
   }
+}
+
+@media all and (min-width: 768px) {
 }
