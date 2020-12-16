@@ -45,9 +45,10 @@ img {
   padding: 0px 30px;
   background-color: #f44336;
   color: white;
+  cursor: pointer;
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .main {
     max-width: 1200px;
   }
@@ -89,8 +90,8 @@ img {
   }
 
   .recipies {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

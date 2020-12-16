@@ -1,7 +1,9 @@
 <div class="recipe-container">
   <img src="{{ recipe.image }}" alt="" (click)="clickRecipe(recipe.id)" />
   <div class="title-card">
-    <p class="recipe-title">{{ recipe.title }}</p>
+    <p class="recipe-title" (click)="clickRecipe(recipe.id)">
+      {{ recipe.title }}
+    </p>
     <i
       class="far fa-heart black"
       *ngIf="!favorites.includes(recipe)"
