@@ -9,9 +9,8 @@
   position: relative;
 }
 .recipe-container:hover {
-    box-shadow: 1px 1px 5px #f44336;
-  }
-
+  box-shadow: 1px 1px 5px #f44336;
+}
 
 img {
   width: 100%;
@@ -26,31 +25,31 @@ img {
 }
 .fa-heart {
   font-size: 20px;
+  color: #f44336;
 }
 
-@media only screen and (min-width: 768px){
-
+@media only screen and (min-width: 768px) {
   .title-card {
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
-}
+  }
 
-.recipe-title {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
- 
-.recipe-container {
-  align-items: center;
-  left: 5%;
-  padding-bottom: 10px;
-  margin-top: 50px;
-  width: 90%;
-  border: 5px #f44336 solid;
-  border-radius: 13px;
-  position: relative;
-  max-width: 400px;
-}
+  .recipe-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .recipe-container {
+    align-items: center;
+    left: 5%;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    width: 90%;
+    border: 5px #f44336 solid;
+    border-radius: 13px;
+    position: relative;
+    max-width: 400px;
+  }
 }

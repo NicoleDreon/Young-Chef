@@ -1,98 +1,67 @@
 <app-header></app-header>
-<h3 (click)="setShowIndex(1)">Kitchen Health & Safety</h3>
-<div *ngIf="showIndex === 1">
-  <img
-    src="\assets\Kitchen Safety\IsItDoneYet_poster.jpg"
-    alt="Is It Done Yet?"
-  />
-  <img
-    src="\assets\Kitchen Safety\Cutting_Boards_and_Food_Safety.jpg"
-    alt="Cutting Board Safety"
-  />
-  <!-- <img
-    src="\assets\Kitchen Safety\How to Sanitize vs Disinfect.jpg"
-    alt="How to Sanitize vs Disinfect"
-  />
-  <img
-    src="\assets\Kitchen Safety\10-Least-Wanted-Poster-English.jpg"
-    alt="Fight BAC"
-  />
-  <img
-    src="\assets\Kitchen Safety\BFS_ChillAd.jpg"
-    alt="BFS Chill"
-    width="1000px"
-  />
-  <img
-    src="\assets\Kitchen Safety\BFS_CleanAd.jpg"
-    alt="BFS Clean Ad"
-    width="1000px"
-  />
-  <img
-    src="\assets\Kitchen Safety\BFS_CookAd.jpg"
-    alt="BFS Cook Ad"
-    width="1000px"
-  />
-  <img
-    src="\assets\Kitchen Safety\BFSSeparateAd.jpg"
-    alt="BFS Seperate"
-    width="1000px"
-  /> -->
+
+<h1 class="page-title">Kitchen Basics</h1>
+<div class="image-content-container">
+  <!-- The Modal -->
+  <div *ngIf="imageModal" class="modal-container">
+    <span class="close" (click)="toggleModal()">X</span>
+    <p>image here</p>
+    <img
+      src="{{ currentImage.src }}"
+      alt="{{ currentImage.alt }}"
+      class="modal-content"
+      id="img01"
+    />
+    <div id="caption"></div>
+  </div>
+
+  <!-- Kitchen Health & Safety  -->
+  <h3 (click)="setShowIndex(1)" class="basics-tabs">Kitchen Health & Safety</h3>
+  <div *ngIf="showIndex === 1" class="image-container">
+    <div *ngFor="let image of healthSafety">
+      <img
+        src="{{ image.src }}"
+        alt="{{ image.alt }}"
+        id="myImg"
+        (click)="setCurrentImage(image.src, image.alt)"
+      />
+    </div>
+  </div>
+  <!-- Kitchen Tools  -->
+  <h3 (click)="setShowIndex(2)" class="basics-tabs">Kitchen Tools</h3>
+  <div *ngIf="showIndex === 2" class="image-container">
+    <div *ngFor="let image of kitchenTools">
+      <img
+        src="{{ image.src }}"
+        alt="{{ image.alt }}"
+        id="myImg"
+        (click)="setCurrentImage(image.src, image.alt)"
+      />
+    </div>
+  </div>
+  <!-- Measurements  -->
+  <h3 (click)="setShowIndex(3)" class="basics-tabs">Measurements</h3>
+  <div *ngIf="showIndex === 3" class="image-container">
+    <div *ngFor="let image of kitchenMeasurements">
+      <img
+        src="{{ image.src }}"
+        alt="{{ image.alt }}"
+        id="myImg"
+        (click)="setCurrentImage(image.src, image.alt)"
+      />
+    </div>
+  </div>
+  <!-- Tips & Tricks  -->
+  <h3 (click)="setShowIndex(4)" class="basics-tabs">Tips & Tricks</h3>
+  <div *ngIf="showIndex === 4" class="image-container">
+    <div *ngFor="let image of tipsTricks">
+      <img
+        src="{{ image.src }}"
+        alt="{{ image.alt }}"
+        id="myImg"
+        (click)="setCurrentImage(image.src, image.alt)"
+      />
+    </div>
+  </div>
 </div>
-<h3 (click)="setShowIndex(2)">Kitchen Tools</h3>
-<div *ngIf="showIndex === 2">
-  <img
-    src="\assets\Kitchen Tools\Kitchen-Utensils-Vocabulary....jpg"
-    alt="Utensils"
-    width="1000px"
-  />
-  <img
-    src="\assets\Kitchen Tools\In-the-Kitchen-Vocabulary-in-english.jpg"
-    alt="Kitchen Vocabulary"
-    width="1000px"
-  />
-  <img />
-</div>
-<h3 (click)="setShowIndex(3)">Measurements</h3>
-<div *ngIf="showIndex === 3">
-  <img
-    src="\assets\Measurements\lze_large_1889_2_600x.webp"
-    alt="Measuring Dry Ingredients"
-  />
-  <br />
-  <img
-    src="\assets\Measurements\lze_large_1889_3_600x.webp"
-    alt="Liquid Ingredients"
-  />
-  <br />
-  <img
-    src="\assets\Measurements\lze_large_1889_4_1200x.webp"
-    alt="Measuring Spoons"
-  />
-  <br />
-  <img
-    src="\assets\Measurements\lze_large_1889_5_1200x.webp"
-    alt="Metric Measurements"
-  />
-  <img />
-  <br />
-  <img
-    src="\assets\Measurements\lze_large_1889_6_1200x.webp"
-    alt="Solid Measurements"
-  />
-  <br />
-  <img
-    src="\assets\Measurements\lze_large_1889_7_1200x.webp"
-    alt="Units of Measurements"
-  />
-  <img />
-</div>
-<h3 (click)="setShowIndex(4)">Tips & Tricks</h3>
-<div *ngIf="showIndex === 4">
-  <img src="\assets\Tips & Tricks\sodium_math_poster.webp" alt="Sodium Math" />
-  <br />
-  <img
-    src="\assets\Tips & Tricks\sugarmath_copy_850a8f8f-68dd-4fb6-9265-f4523252aafe.webp"
-    alt="Sugar Math"
-  />
-  <img />
-</div>
+<!-- End of image-content-container -->
