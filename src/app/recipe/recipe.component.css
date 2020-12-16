@@ -41,6 +41,7 @@ ul.ingredients-list {
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
 }
 .num-ingredients-container {
   display: flex;

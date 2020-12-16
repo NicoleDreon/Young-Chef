@@ -7,6 +7,7 @@
   border: 5px #f44336 solid;
   border-radius: 13px;
   position: relative;
+  cursor: pointer;
 }
 .recipe-container:hover {
   box-shadow: 1px 1px 5px #f44336;
