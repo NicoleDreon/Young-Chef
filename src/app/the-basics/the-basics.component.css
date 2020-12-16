@@ -115,8 +115,8 @@
 @media all and (min-width: 1025px) {
   .image-content-container {
     margin-bottom: 55px;
-    margin-left: 100px;
-    margin-right: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .modal-image-container {

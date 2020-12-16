@@ -66,8 +66,9 @@ h3 {
     display: none;
   }
   .videos-content-container {
+    padding-bottom: 55px;
     margin-bottom: 55px;
-    margin-left: 100px;
-    margin-right: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
