@@ -2,21 +2,22 @@
 
 <h1 class="page-title">Kitchen Basics</h1>
 <div class="image-content-container">
-  <!-- The Modal -->
+  <!-- The Image Modal -->
   <div *ngIf="imageModal" class="modal-container">
-    <span class="close" (click)="toggleModal()">X</span>
-    <p>image here</p>
-    <img
-      src="{{ currentImage.src }}"
-      alt="{{ currentImage.alt }}"
-      class="modal-content"
-      id="img01"
-    />
-    <div id="caption"></div>
+    <div class="modal-image-container">
+      <button class="close" (click)="toggleModal()">X</button>
+      <img
+        src="{{ currentImage.src }}"
+        alt="{{ currentImage.alt }}"
+        class="modal-content"
+        id="img01"
+      />
+    </div>
   </div>
 
   <!-- Kitchen Health & Safety  -->
   <h3 (click)="setShowIndex(1)" class="basics-tabs">Kitchen Health & Safety</h3>
+
   <div *ngIf="showIndex === 1" class="image-container">
     <div *ngFor="let image of healthSafety">
       <img
@@ -27,6 +28,7 @@
       />
     </div>
   </div>
+
   <!-- Kitchen Tools  -->
   <h3 (click)="setShowIndex(2)" class="basics-tabs">Kitchen Tools</h3>
   <div *ngIf="showIndex === 2" class="image-container">
