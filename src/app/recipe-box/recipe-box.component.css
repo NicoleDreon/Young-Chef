@@ -17,9 +17,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .title {
     color: #8ac926;
     border-bottom: 1px solid #8ac926;
@@ -28,5 +29,4 @@
     margin: 0 auto;
     padding-top: 30px;
   }
- 
 }

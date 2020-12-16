@@ -28,6 +28,10 @@ h3 {
   justify-content: center;
 }
 
+.video-content {
+  border: 1px solid #000;
+}
+
 /* .arrow {
   border: solid #6a4c93;
   border-width: 0 3px 3px 0;
