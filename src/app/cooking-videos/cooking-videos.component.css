@@ -33,13 +33,6 @@
 .videos-content-container {
   margin: 0 10px;
 }
-/* h3 { */
-/* margin: 10px; */
-/* background-color: #6a4c93; */
-/* color: white;
-  padding: 10px;
-  border-radius: 10px;
-} */
 
 .video-group {
   background-color: #6a4c93;
@@ -51,17 +44,6 @@
 .video-content {
   border: 1px solid #000;
 }
-
-/* .arrow {
-  border: solid #6a4c93;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-} */
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .welcome-container {
@@ -91,6 +73,21 @@
   }
 }
 @media all and (min-width: 1025px) {
+  .welcome-container {
+    display: none;
+  }
+  .desktop-logo-container {
+    display: flex;
+    justify-content: center;
+  }
+  .logo-desktop {
+    height: 150px;
+    margin-top: 20px;
+  }
+  .page-title {
+    display: none;
+  }
+
   .video-.video-group {
     background-color: rgb(106, 76, 147, 0.8);
     cursor: pointer;

@@ -9,7 +9,7 @@
         class="logo-mobile"
       />
     </div>
-    <h1 class="page-title">Kyle's Recipe Box</h1>
+    <h1 class="page-title">Your Recipe Box</h1>
   </div>
 
   <!-- Desktop Logo -->
@@ -22,8 +22,11 @@
       />
     </div>
     <div>
-      <h1 class="page-title-desktop">Kyle's Recipe Box</h1>
+      <h1 class="page-title-desktop">Your Recipe Box</h1>
     </div>
+  </div>
+  <div *ngIf="favorites.length === 0" class="placeholder-text">
+    <p>Your favorite recipes will be saved here.</p>
   </div>
 
   <app-favorite-recipe class="fav-container"></app-favorite-recipe>

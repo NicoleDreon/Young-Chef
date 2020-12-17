@@ -14,15 +14,20 @@
 
 .page-title {
   color: #8ac926;
-  border-bottom: 1px solid #8ac926;
   max-width: 600px;
-  text-align: center;
   padding-top: 5px;
   position: relative;
 }
 
 .desktop-welcome-container {
   display: none;
+}
+
+.placeholder-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: grey;
 }
 
 .fav-page {
