@@ -32,7 +32,7 @@
           <div class="ingredient-title-and-tips">
             <h2 class="ingredient-list-title">Ingredient List</h2>
             <p class="tips">
-              Use the checkboxs below to mark off ingredients once you use them
+              Use the checkboxes below to mark off ingredients once you use them
               or as a shopping list!
             </p>
           </div>
@@ -47,7 +47,10 @@
           class="ingredients-list"
           *ngFor="let info of recipeInfo?.extendedIngredients"
         >
-          <li><input type="checkbox" /> {{ info.original }}</li>
+          <li>
+            <input type="checkbox" />
+            {{ info.original }}
+          </li>
         </ul>
       </div>
       <!-- End of ingredient list div -->
