@@ -24,8 +24,8 @@
 <div class="image-content-container">
   <!-- The Image Modal -->
   <div *ngIf="imageModal" class="modal-container">
+    <button class="close" (click)="toggleModal()">X</button>
     <div class="modal-image-container">
-      <button class="close" (click)="toggleModal()">X</button>
       <img
         src="{{ currentImage.src }}"
         alt="{{ currentImage.alt }}"
