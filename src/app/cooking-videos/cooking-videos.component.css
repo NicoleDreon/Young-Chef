@@ -88,7 +88,7 @@
     display: none;
   }
 
-  .video-.video-group {
+  .video-group:hover {
     background-color: rgb(106, 76, 147, 0.8);
     cursor: pointer;
   }
@@ -98,7 +98,8 @@
   .videos-content-container {
     padding-bottom: 55px;
     margin-bottom: 55px;
+
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
   }
 }
