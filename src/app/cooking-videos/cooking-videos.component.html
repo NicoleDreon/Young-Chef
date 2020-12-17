@@ -1,6 +1,27 @@
 <app-header></app-header>
+
+<!-- Mobile Heading Container -->
+<div class="welcome-container">
+  <div>
+    <img
+      src="/assets/Young-Chef-Icon2.png"
+      alt="Young Chef Mobile Logo"
+      class="logo-mobile"
+    />
+  </div>
+  <h1 class="page-title">Cooking Videos</h1>
+</div>
+
+<!-- Desktop Logo -->
+<div class="desktop-logo-container">
+  <img
+    src="/assets/Young-Chef-Logo.png"
+    alt="Young Chef Logo"
+    class="logo-desktop"
+  />
+</div>
+
 <!-- start basics array -->
-<h1 class="page-title">Cooking Videos</h1>
 <div class="videos-content-container">
   <h3 class="video-group" (click)="setShowIndex(1)">
     Cooking Basics <i class="arrow down"></i>
@@ -23,7 +44,7 @@
                 videoId="{{ video.id }}"
                 suggestedQuality="hd720"
                 [height]="250"
-                [width]="500"
+                [width]="400"
                 [startSeconds]="0"
                 [endSeconds]="100000"
               >

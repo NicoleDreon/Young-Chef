@@ -1,11 +1,29 @@
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.logo-mobile {
+  height: 80px;
+  margin-right: 10px;
+}
+
+.desktop-logo-container {
+  display: none;
+}
+
 .page-title {
-  margin-left: 57px;
   display: flex;
   justify-content: center;
 }
 
 .image-content-container {
   margin: 0 10px;
+  margin-bottom: 60px;
 }
 
 .modal-container {
@@ -26,7 +44,6 @@
   display: flex;
   justify-content: center;
   position: relative;
-  /* width: fit-content; */
   width: 80%;
 }
 
@@ -40,10 +57,9 @@
   right: -20px;
   height: 40px;
   width: 40px;
-  /* border: 2px solid #ffca3a; */
   background-color: #fff;
-  /* color: #000; */
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .close:hover {
@@ -78,6 +94,18 @@
 
 /******* MEDIA QUERIES *******/
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  .welcome-container {
+    display: none;
+  }
+  .desktop-logo-container {
+    display: flex;
+    justify-content: center;
+  }
+  .logo-desktop {
+    height: 150px;
+    margin-top: 20px;
+  }
+
   .image-content-container {
     margin-bottom: 55px;
     margin-left: 50px;
@@ -93,11 +121,6 @@
     flex-wrap: wrap;
   }
 
-  /* .close {
-    right: 30px;
-    top: -20px;
-  } */
-
   .page-title {
     display: none;
   }
@@ -106,10 +129,6 @@
     background-color: #fdda78;
     cursor: pointer;
   }
-
-  /* .modal-content {
-    max-width: 500px;
-  } */
 } /* End of min-width: 768px Media Queries */
 
 @media all and (min-width: 1025px) {
@@ -119,13 +138,21 @@
     margin: 0 auto;
   }
 
+  .welcome-container {
+    display: none;
+  }
+  .desktop-logo-container {
+    display: flex;
+    justify-content: center;
+  }
+  .logo-desktop {
+    height: 100px;
+    margin-top: 20px;
+  }
+
   .modal-image-container {
     width: 30%;
   }
-  /* .close {
-    right: 170px;
-    top: -20px;
-  } */
 
   .page-title {
     display: none;
@@ -135,7 +162,4 @@
     background-color: #fdda78;
     cursor: pointer;
   }
-  /* .modal-content {
-    max-width: 450px;
-  } */
 } /* End of min-width: 1025px Media Queries */

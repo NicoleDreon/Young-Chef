@@ -31,11 +31,7 @@ export class SearchRecipesComponent implements OnInit {
           console.log(res);
         });
       } else {
-        this.recipeService.getRandomRecipe().subscribe((res: any) => {
-          this.recipeData = res.recipes;
-          console.log(res);
-        });
-        console.log('no search term'); //trending?
+        this.getRandomRecipe();
       }
     });
   } // End of ngOnInit
@@ -69,6 +65,57 @@ export class SearchRecipesComponent implements OnInit {
     this.filterRecipes();
   };
 
+  getRandomRecipe = () => {
+    this.recipeService.getRandomRecipe().subscribe(
+      (res: any) => {
+        this.recipeData = res.recipes;
+        console.log(res);
+      },
+      (error: any) => {
+        this.recipeService.changeApiKey();
+        this.recipeService.getRandomRecipe().subscribe((res: any) => {
+          this.recipeData = res.recipes;
+        }),
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.recipeData = res.recipes;
+            });
+          },
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.recipeData = res.recipes;
+            });
+          },
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.recipeData = res.recipes;
+            });
+          },
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.recipeData = res.recipes;
+            });
+          },
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.recipeData = res.recipes;
+            });
+          },
+          (error: any) => {
+            this.recipeService.changeApiKey();
+            this.recipeService.getRandomRecipe().subscribe((res: any) => {
+              this.recipeData = res.recipes;
+            });
+          };
+      } // end of first error
+    );
+  };
+
   // let newArray = this.recipeData.filter((item)=>{
   //   if(item.readyInMinutes <= this.minutesVal){
   //     return item;
@@ -83,3 +130,9 @@ export class SearchRecipesComponent implements OnInit {
   //   }
   // };
 } // End of export
+
+// this.recipeService.getRandomRecipe().subscribe((res: any) => {
+//   this.recipeData = res.recipes;
+//   console.log(res);
+// });
+// console.log('no search term'); //trending?
