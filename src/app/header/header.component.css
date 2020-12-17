@@ -15,9 +15,7 @@
 .home-container a:hover {
   color: #000;
 }
-/* .basics-link a:hover {
-  color: #ffca3a;
-} */
+
 .home-container input {
   display: block;
   width: 37px;
@@ -94,7 +92,6 @@
 @media all and (min-width: 768px) {
   .navigation {
     display: flex;
-    /* justify-content: space-between; */
     background-color: #fff;
     color: #fff;
     width: 100%;
