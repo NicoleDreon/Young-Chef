@@ -32,6 +32,7 @@
 }
 .videos-content-container {
   margin: 0 10px;
+  margin-bottom: 80px;
 }
 
 .video-group {
@@ -67,7 +68,7 @@
   }
 
   .videos-content-container {
-    margin-bottom: 55px;
+    margin-bottom: 80px;
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -97,7 +98,7 @@
   }
   .videos-content-container {
     padding-bottom: 55px;
-    margin-bottom: 55px;
+    margin-bottom: 80px;
 
     max-width: 1200px;
     margin: auto;
