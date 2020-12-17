@@ -11,9 +11,6 @@ export class RecipeService {
   randomURL: string = 'https://api.spoonacular.com/recipes/random';
   triviaURL: string = 'https://api.spoonacular.com/food/trivia/random';
 
-
- 
-
   apiKeys: string[] = [
     '7ed03fd3e48b465985205b580d3d8763',
     '1e0e6ac413064d44ad1312d4c942f92a',
@@ -22,7 +19,7 @@ export class RecipeService {
     'b2bd2bc172c74f2cadc8befb3201513e',
     '49fd1627458b4a2284c2a4ba1e72a698',
     '8fcd393b4f8148959ad1a8c9064eb2c2',
-  ]; 
+  ];
   counter = 0;
   apiKey: string = this.apiKeys[this.counter];
   // apiKey: string = '7ed03fd3e48b465985205b580d3d8763'; // Phil
@@ -44,7 +41,7 @@ export class RecipeService {
         apiKey: this.apiKey,
         query: searchTerm,
         addRecipeInformation: 'true',
-        number: '3',
+        number: '12',
       },
     });
   }; // End of getRecipe

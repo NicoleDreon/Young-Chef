@@ -1,29 +1,44 @@
 <app-header></app-header>
 <div class="about-section">
   <!-- <h1>About Us Page</h1> -->
-  <h1>Hello and welcome to Young Chef!</h1>
+  <!-- Mobile Heading Container -->
+  <div class="welcome-container">
+    <div>
+      <img
+        src="/assets/Young-Chef-Icon2.png"
+        alt="Young Chef Mobile Logo"
+        class="logo-mobile"
+      />
+    </div>
+    <h1 class="page-title">About Young Chef</h1>
+  </div>
+  <div class="about-content">
+    <p class="welcome-text">Hello and welcome to Young Chef!</p>
+    <p class="about intro">
+      We all need to eat and it's a vital life skill to be able to cook for
+      oneself.
+    </p>
 
-  <p class="about intro">
-    We all need to eat and it's a vital life skill to be able to cook for
-    oneself.
-  </p>
+    <p class="about started">
+      The intention of the Young Chef application is to encourage and teach kids
+      of all ages to learn how to cook. The user friendly design makes it easy
+      to navigate so you can get to cooking quickly without any prior kitchen or
+      cooking knowledge. Although Young Chef started as a final project for the
+      Front-End Bootcamp at Grand Circus, our intention is to maintain and grow
+      the app moving forward.
+    </p>
 
-  <p class="about started">
-    Young Chef started as a final project for Frontend Bootcmap at Grand Circus.
-    The intention of the application is to encourage and teach kids of all ages
-    to learn how to cook. The user friendly design makes it easy to navigate so
-    you can get to cooking quickly without any prior kitchen or cooking
-    knowledge.
-  </p>
-
-  <p class="about partner">
-    If you’d like to partner with Young Chef for future educational purposes
-    reach out to one of our team members.
-  </p>
-  <p class="about tech">
-    Tech used: Angular, TypeScript, JavaScript, HTML, CSS, API
-  </p>
+    <p class="about partner">
+      If you’d like to partner with Young Chef for future educational purposes
+      reach out to one of our team members.
+    </p>
+    <p class="about tech">
+      Tech used: Angular, TypeScript, JavaScript, HTML, CSS, API
+    </p>
+  </div>
+  <!-- end of about content-->
 </div>
+<!-- end of about section-->
 
 <h2 class="team-title">Meet Our Team</h2>
 <div class="row">
@@ -37,7 +52,16 @@
       <div class="container">
         <h2>Phil Cronin</h2>
         <p class="title">Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div class="favorites-container">
+          <p class="favorite-food">
+            Favorite Food: Steak with grilled asparagus and mashed potatoes.
+          </p>
+          <p class="quote">
+            "Good food is the foundation of genuine happiness." ― Auguste
+            Escoffier
+          </p>
+        </div>
+        <!-- end of fav food/quote div -->
         <p>
           <a
             target="_blank"
@@ -58,14 +82,23 @@
   <div class="column">
     <div class="card">
       <img
-        src="/assets/Nicole-Dreon_600x600.jpg"
+        src="/assets/Nicole-Dreon_600x600_V2.jpg"
         alt="Nicole Dreon"
         class="about-img"
       />
       <div class="container">
         <h2>Nicole Dreon</h2>
         <p class="title">Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div class="favorites-container">
+          <p class="favorite-food">
+            Favorite Food: Grilled salmon with roasted veggies and mashed
+            potatoes.
+          </p>
+          <p class="quote">
+            “Let food be thy medicine and medicine be thy food” ― Hippocrates
+          </p>
+        </div>
+        <!-- end of fav food/quote div -->
         <p>
           <a
             target="_blank"
@@ -93,7 +126,17 @@
       <div class="container">
         <h2>Leslie Gilbert</h2>
         <p class="title">Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div class="favorites-container">
+          <p class="favorite-food">
+            Favorite Food: Filet mignon and lobster tail with veggies and rice
+            hibachi style.
+          </p>
+          <p class="quote">
+            “I cook with wine, sometimes I even add it to the food.” ― W.C.
+            Fields
+          </p>
+        </div>
+        <!-- end of fav food/quote div -->
         <p>
           <a
             target="_blank"
@@ -121,7 +164,15 @@
       <div class="container">
         <h2>Kyle Smith</h2>
         <p class="title">Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div class="favorites-container">
+          <p class="favorite-food">
+            Favorite Food: Bbq chicken pizza with jalapeno and cajun crust.
+          </p>
+          <p class="quote">
+            “Cakes are healthy too, you just eat a small slice.” ― Mary Berry
+          </p>
+        </div>
+        <!-- end of fav food/quote div -->
         <p>
           <a
             target="_blank"
